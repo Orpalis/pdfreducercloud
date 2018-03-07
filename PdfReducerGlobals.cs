@@ -1,6 +1,6 @@
 ﻿/**********************************************************************
  * Projet:                  pdfReducer.Cloud
- * Authors:					- Evan Carrère.
+ * Authors:                 - Evan Carrère.
  *                          - Loïc Carrère.
  *
  * (C) Copyright 2018, ORPALIS.

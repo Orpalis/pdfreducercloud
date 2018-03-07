@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PDF_Reducer.Cloud", "PDF_Reducer.Cloud.csproj", "{DF9D52A4-08B2-43AF-8F99-2ABAA1DFCFCC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PassportPDF.Tools.Framework", "..\PassportPDF.Tools.Framework\PassportPDF.Tools.Framework.csproj", "{AE9E6268-CEC3-4ECD-B809-E6A48D893C79}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PassportPDF.Tools.WinForm", "..\PassportPDF.Tools.WinForm\PassportPDF.Tools.WinForm.csproj", "{3F87DAD1-25B8-4C64-B990-4A5BFA5542F7}"
 EndProject
 Global
@@ -19,10 +17,6 @@ Global
 		{DF9D52A4-08B2-43AF-8F99-2ABAA1DFCFCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DF9D52A4-08B2-43AF-8F99-2ABAA1DFCFCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DF9D52A4-08B2-43AF-8F99-2ABAA1DFCFCC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AE9E6268-CEC3-4ECD-B809-E6A48D893C79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AE9E6268-CEC3-4ECD-B809-E6A48D893C79}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AE9E6268-CEC3-4ECD-B809-E6A48D893C79}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AE9E6268-CEC3-4ECD-B809-E6A48D893C79}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3F87DAD1-25B8-4C64-B990-4A5BFA5542F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3F87DAD1-25B8-4C64-B990-4A5BFA5542F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F87DAD1-25B8-4C64-B990-4A5BFA5542F7}.Release|Any CPU.ActiveCfg = Release|Any CPU

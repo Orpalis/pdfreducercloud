@@ -108,11 +108,11 @@
     <Reference Include="Orpalis.Globals.Localization, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Orpalis.Globals.Localization.1.0.1\lib\netstandard1.3\Orpalis.Globals.Localization.dll</HintPath>
     </Reference>
-    <Reference Include="PassportPDF, Version=1.0.13.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\PassportPDF.1.0.13\lib\net461\PassportPDF.dll</HintPath>
+    <Reference Include="PassportPDF, Version=1.0.14.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\PassportPDF.1.0.14\lib\net461\PassportPDF.dll</HintPath>
     </Reference>
-    <Reference Include="PassportPDF.Tools.Framework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\PassportPDF.Tools.Framework.1.0.0\lib\netstandard2.0\PassportPDF.Tools.Framework.dll</HintPath>
+    <Reference Include="PassportPDF.Tools.Framework, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\PassportPDF.Tools.Framework.1.0.1\lib\netstandard2.0\PassportPDF.Tools.Framework.dll</HintPath>
     </Reference>
     <Reference Include="PassportPDF.Tools.WinForm, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\PassportPDF.Tools.WinForm.1.0.0\lib\net461\PassportPDF.Tools.WinForm.dll</HintPath>

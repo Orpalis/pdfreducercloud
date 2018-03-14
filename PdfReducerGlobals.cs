@@ -25,36 +25,36 @@ namespace pdfReducerCloud
 {
     internal static class PdfReducerGlobals
     {
-            public const string PRODUCT_NAME = "PassportPDF PDF Reducer Cloud";
-            public const string APP_EXECUTABLE_NAME = "pdfReducerCloud.exe";
-            public const string PASSPORT_PDF_APP_ID = "2ED8750B-AE6D-47B7-98CA-CB0A413BD24B";
+        public const string PRODUCT_NAME = "PassportPDF PDF Reducer Cloud";
+        public const string APP_EXECUTABLE_NAME = "pdfReducerCloud.exe";
+        public const string PASSPORT_PDF_APP_ID = "2ED8750B-AE6D-47B7-98CA-CB0A413BD24B";
 
-            public static ReduceActionConfiguration ReduceActionConfiguration = new ReduceActionConfiguration();
+        public static ReduceActionConfiguration ReduceActionConfiguration = new ReduceActionConfiguration();
 
-            public static readonly OrpalisLocalizer LabelsLocalizer = new OrpalisLocalizer(AssemblyUtilities.GetManifestResourceStream("res.labels.json"));
+        public static readonly OrpalisLocalizer LabelsLocalizer = new OrpalisLocalizer(AssemblyUtilities.GetManifestResourceStream("res.labels.json"));
 
 
-            public static string GetLegalProductName(bool includeVersion)
+        public static string GetLegalProductName(bool includeVersion)
+        {
+            string productName = PRODUCT_NAME;
+            if (includeVersion)
             {
-                string productName = PRODUCT_NAME;
-                if (includeVersion)
-                {
-                    productName += " " + AssemblyUtilities.GetVersionString();
-                }
-
-                return productName;
+                productName += " " + AssemblyUtilities.GetVersionString();
             }
 
-
-            public static string GetApplicationConfigurationFilePath()
-            {
-                return Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\" + PASSPORT_PDF_APP_ID + "\\settings.data";
-            }
-
-
-            public static string GetReduceActionConfigurationFilePath()
-            {
-                return Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\" + PASSPORT_PDF_APP_ID + "\\reduceActionConfiguration.data";
-            }
+            return productName;
         }
+
+
+        public static string GetApplicationConfigurationFilePath()
+        {
+            return Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\" + PASSPORT_PDF_APP_ID + "\\settings.data";
+        }
+
+
+        public static string GetReduceActionConfigurationFilePath()
+        {
+            return Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\" + PASSPORT_PDF_APP_ID + "\\reduceActionConfiguration.data";
+        }
+    }
 }

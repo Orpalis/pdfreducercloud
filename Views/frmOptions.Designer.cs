@@ -35,10 +35,6 @@
             this.tabCompression = new System.Windows.Forms.TabPage();
             this.chkPackFonts = new System.Windows.Forms.CheckBox();
             this.chkUseMRC = new System.Windows.Forms.CheckBox();
-            this.rbScannerUnknown = new System.Windows.Forms.RadioButton();
-            this.rbScannerNo = new System.Windows.Forms.RadioButton();
-            this.rbScannerYes = new System.Windows.Forms.RadioButton();
-            this.lbCreatedFromScanner = new System.Windows.Forms.Label();
             this.chkCharRepair = new System.Windows.Forms.CheckBox();
             this.tabBitmap = new System.Windows.Forms.TabPage();
             this.chkJBIG2 = new System.Windows.Forms.CheckBox();
@@ -134,10 +130,6 @@
             // 
             this.tabCompression.Controls.Add(this.chkPackFonts);
             this.tabCompression.Controls.Add(this.chkUseMRC);
-            this.tabCompression.Controls.Add(this.rbScannerUnknown);
-            this.tabCompression.Controls.Add(this.rbScannerNo);
-            this.tabCompression.Controls.Add(this.rbScannerYes);
-            this.tabCompression.Controls.Add(this.lbCreatedFromScanner);
             this.tabCompression.Controls.Add(this.chkCharRepair);
             this.tabCompression.Controls.Add(this.chkEnableColorDetection);
             this.tabCompression.Location = new System.Drawing.Point(4, 22);
@@ -151,7 +143,7 @@
             // chkPackFonts
             // 
             this.chkPackFonts.AutoSize = true;
-            this.chkPackFonts.Location = new System.Drawing.Point(15, 155);
+            this.chkPackFonts.Location = new System.Drawing.Point(15, 85);
             this.chkPackFonts.Name = "chkPackFonts";
             this.chkPackFonts.Size = new System.Drawing.Size(77, 17);
             this.chkPackFonts.TabIndex = 17;
@@ -162,57 +154,12 @@
             // 
             this.chkUseMRC.AutoSize = true;
             this.chkUseMRC.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.chkUseMRC.Location = new System.Drawing.Point(15, 131);
+            this.chkUseMRC.Location = new System.Drawing.Point(15, 61);
             this.chkUseMRC.Name = "chkUseMRC";
             this.chkUseMRC.Size = new System.Drawing.Size(253, 17);
             this.chkUseMRC.TabIndex = 16;
             this.chkUseMRC.Text = "Enable MRC (Mixed raster content) compression";
             this.chkUseMRC.UseVisualStyleBackColor = true;
-            // 
-            // rbScannerUnknown
-            // 
-            this.rbScannerUnknown.AutoSize = true;
-            this.rbScannerUnknown.Checked = true;
-            this.rbScannerUnknown.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.rbScannerUnknown.Location = new System.Drawing.Point(155, 109);
-            this.rbScannerUnknown.Name = "rbScannerUnknown";
-            this.rbScannerUnknown.Size = new System.Drawing.Size(134, 17);
-            this.rbScannerUnknown.TabIndex = 15;
-            this.rbScannerUnknown.TabStop = true;
-            this.rbScannerUnknown.Text = "Unknown (auto-detect)";
-            this.rbScannerUnknown.UseVisualStyleBackColor = true;
-            // 
-            // rbScannerNo
-            // 
-            this.rbScannerNo.AutoSize = true;
-            this.rbScannerNo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.rbScannerNo.Location = new System.Drawing.Point(155, 86);
-            this.rbScannerNo.Name = "rbScannerNo";
-            this.rbScannerNo.Size = new System.Drawing.Size(39, 17);
-            this.rbScannerNo.TabIndex = 14;
-            this.rbScannerNo.Text = "No";
-            this.rbScannerNo.UseVisualStyleBackColor = true;
-            // 
-            // rbScannerYes
-            // 
-            this.rbScannerYes.AutoSize = true;
-            this.rbScannerYes.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.rbScannerYes.Location = new System.Drawing.Point(155, 63);
-            this.rbScannerYes.Name = "rbScannerYes";
-            this.rbScannerYes.Size = new System.Drawing.Size(43, 17);
-            this.rbScannerYes.TabIndex = 13;
-            this.rbScannerYes.Text = "Yes";
-            this.rbScannerYes.UseVisualStyleBackColor = true;
-            // 
-            // lbCreatedFromScanner
-            // 
-            this.lbCreatedFromScanner.AutoSize = true;
-            this.lbCreatedFromScanner.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbCreatedFromScanner.Location = new System.Drawing.Point(12, 65);
-            this.lbCreatedFromScanner.Name = "lbCreatedFromScanner";
-            this.lbCreatedFromScanner.Size = new System.Drawing.Size(137, 13);
-            this.lbCreatedFromScanner.TabIndex = 12;
-            this.lbCreatedFromScanner.Text = "PDF created from scanner?";
             // 
             // chkCharRepair
             // 
@@ -586,10 +533,6 @@
         private System.Windows.Forms.Label lbInteractiveContent;
         private System.Windows.Forms.CheckBox chkCharRepair;
         private System.Windows.Forms.CheckBox chkUseMRC;
-        private System.Windows.Forms.RadioButton rbScannerUnknown;
-        private System.Windows.Forms.RadioButton rbScannerNo;
-        private System.Windows.Forms.RadioButton rbScannerYes;
-        private System.Windows.Forms.Label lbCreatedFromScanner;
         private System.Windows.Forms.CheckBox chkRecompressImages;
         private System.Windows.Forms.CheckBox chkDownscaleImages;
         private System.Windows.Forms.CheckBox chkRemoveHyperlinks;

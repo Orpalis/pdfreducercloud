@@ -26,7 +26,7 @@ namespace pdfReducerCloud.Views
 {
     public partial class frmOptions : PassportPDF.Tools.WinForm.Views.frmOptionsBase
     {
-        public frmOptions() : base( global::pdfReducerCloud.Properties.Resources.banner_pdf_reducer_cloud)
+        public frmOptions() : base(global::pdfReducerCloud.Properties.Resources.banner_pdf_reducer_cloud)
         {
             InitializeComponent();
         }
@@ -57,13 +57,9 @@ namespace pdfReducerCloud.Views
             lbDocumentContent.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_lbDocumentContent", FrameworkGlobals.ApplicationLanguage);
             lbInteractiveContent.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_lbInteractiveContent", FrameworkGlobals.ApplicationLanguage);
             lbPreferredVersion.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_lbPreferredVersion", FrameworkGlobals.ApplicationLanguage);
-            lbCreatedFromScanner.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_lbCreatedFromScanner", FrameworkGlobals.ApplicationLanguage);
             lbDpi.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_lbDpi", FrameworkGlobals.ApplicationLanguage);
             lbQuality.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_lbQuality", FrameworkGlobals.ApplicationLanguage);
             lbResolution.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_lbResolution", FrameworkGlobals.ApplicationLanguage);
-            rbScannerYes.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_rbScannerYes", FrameworkGlobals.ApplicationLanguage);
-            rbScannerNo.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_rbScannerNo", FrameworkGlobals.ApplicationLanguage);
-            rbScannerUnknown.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_rbScannerUnknown", FrameworkGlobals.ApplicationLanguage);
             tabBitmap.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_tabBitmap", FrameworkGlobals.ApplicationLanguage);
             tabContentRemoval.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_tabContentRemoval", FrameworkGlobals.ApplicationLanguage);
             tabOutputFormat.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_tabOutputFormat", FrameworkGlobals.ApplicationLanguage);
@@ -110,11 +106,6 @@ namespace pdfReducerCloud.Views
 
             // Check whether mutually exclusive options should be disabled
             chkCharRepair.Enabled = PdfReducerGlobals.ReduceActionConfiguration.EnableColorDetection;
-            rbScannerYes.Enabled = PdfReducerGlobals.ReduceActionConfiguration.EnableColorDetection;
-            rbScannerNo.Enabled = PdfReducerGlobals.ReduceActionConfiguration.EnableColorDetection;
-            rbScannerUnknown.Enabled = PdfReducerGlobals.ReduceActionConfiguration.EnableColorDetection;
-            lbCreatedFromScanner.Enabled = PdfReducerGlobals.ReduceActionConfiguration.EnableColorDetection;
-
             chkCharRepair.Checked = chkCharRepair.Enabled && (bool)PdfReducerGlobals.ReduceActionConfiguration.EnableCharRepair;
 
             switch (PdfReducerGlobals.ReduceActionConfiguration.OutputVersion)
@@ -153,25 +144,6 @@ namespace pdfReducerCloud.Views
                     break;
                 case PDFReduceParameters.ImageQualityEnum.ImageQualityVeryHigh:
                     cmbImageQuality.SelectedIndex = 3;
-                    break;
-            }
-
-            switch (PdfReducerGlobals.ReduceActionConfiguration.ScannerSource)
-            {
-                case PDFReduceParameters.ScannerSourceEnum.PDFScannerSourceNo:
-                    rbScannerNo.Checked = true;
-                    rbScannerYes.Checked = false;
-                    rbScannerUnknown.Checked = false;
-                    break;
-                case PDFReduceParameters.ScannerSourceEnum.PDFScannerSourceYes:
-                    rbScannerNo.Checked = false;
-                    rbScannerYes.Checked = true;
-                    rbScannerUnknown.Checked = false;
-                    break;
-                case PDFReduceParameters.ScannerSourceEnum.PDFScannerSourceUnknown:
-                    rbScannerNo.Checked = false;
-                    rbScannerYes.Checked = false;
-                    rbScannerUnknown.Checked = true;
                     break;
             }
         }
@@ -237,19 +209,6 @@ namespace pdfReducerCloud.Views
 
             }
 
-            if (rbScannerNo.Checked)
-            {
-                PdfReducerGlobals.ReduceActionConfiguration.ScannerSource = PDFReduceParameters.ScannerSourceEnum.PDFScannerSourceNo;
-            }
-            else if (rbScannerYes.Checked)
-            {
-                PdfReducerGlobals.ReduceActionConfiguration.ScannerSource = PDFReduceParameters.ScannerSourceEnum.PDFScannerSourceYes;
-            }
-            else
-            {
-                PdfReducerGlobals.ReduceActionConfiguration.ScannerSource = PDFReduceParameters.ScannerSourceEnum.PDFScannerSourceUnknown;
-            }
-
             Dispose();
         }
 
@@ -268,18 +227,10 @@ namespace pdfReducerCloud.Views
                 // Don't allow character repairing when no color detection is performed
                 chkCharRepair.Checked = false;
                 chkCharRepair.Enabled = false;
-                // Disable selecting scanner source when no color detection is performed
-                rbScannerNo.Enabled = false;
-                rbScannerUnknown.Enabled = false;
-                rbScannerYes.Enabled = false;
-                lbCreatedFromScanner.Enabled = false;
             }
             else
             {
-                // Re-enable char character repairing and selecting scanner source.
-                rbScannerNo.Enabled = true;
-                rbScannerUnknown.Enabled = true;
-                rbScannerYes.Enabled = true;
+                // Re-enable char character repairing
                 chkCharRepair.Enabled = true;
             }
         }

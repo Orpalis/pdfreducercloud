@@ -42,9 +42,9 @@ namespace pdfReducerCloud.Controller
         private PDFReducerStats _stats;
 
         public PDFReducerController(bool autoRun, string[] args) : base(
-            new PassportPDFDesktopAppInformation(PdfReducerGlobals.PRODUCT_NAME, PdfReducerGlobals.PASSPORT_PDF_APP_ID, 
-                PdfReducerGlobals.APP_EXECUTABLE_NAME,AssemblyUtilities.GetVersion(),
-                Icon.ExtractAssociatedIcon(Assembly.GetExecutingAssembly().Location), 
+            new PassportPDFDesktopAppInformation(PdfReducerGlobals.PRODUCT_NAME, PdfReducerGlobals.PASSPORT_PDF_APP_ID,
+                PdfReducerGlobals.APP_EXECUTABLE_NAME, AssemblyUtilities.GetVersion(),
+                Icon.ExtractAssociatedIcon(Assembly.GetExecutingAssembly().Location),
                 global::pdfReducerCloud.Properties.Resources.pdf_reducer_cloud_final_logo,
                 PdfReducerGlobals.GetApplicationConfigurationFilePath(), autoRun, args))
         { }
@@ -86,7 +86,7 @@ namespace pdfReducerCloud.Controller
 
                 _view.NotifyOperationsResult(LogMessagesUtils.GetReductionWorkCompletionText(_operationsStats.ProcessedFileCount, _operationsStats.SuccesfullyProcessedFileCount, _operationsStats.UnsuccesfullyProcessedFileCount, _stats.TotalInputSize, _stats.TotalOutputSize, elapsedTime));
 
-                string detailedWorkCompletionMessage = LogMessagesUtils.GetDetailedReductionWorkCompletionText(_operationsStats.ProcessedFileCount, _operationsStats.SuccesfullyProcessedFileCount, _operationsStats.UnsuccesfullyProcessedFileCount, _stats.TotalInputSize, _stats.TotalOutputSize, elapsedTime);
+                string detailedWorkCompletionMessage = LogMessagesUtils.GetDetailedReductionWorkCompletionText(_operationsStats.ProcessedFileCount, _operationsStats.SuccesfullyProcessedFileCount, _operationsStats.UnsuccesfullyProcessedFileCount, _stats.FileConvertedToPDFCount, _stats.TotalInputSize, _stats.TotalOutputSize, elapsedTime);
 
                 if (!_appInfo.AutoRun)
                 {
@@ -180,6 +180,7 @@ namespace pdfReducerCloud.Controller
             _stats.TotalInputSize = 0;
             _stats.TotalOutputSize = 0;
             _stats.ReductionRatio = 0;
+            _stats.FileConvertedToPDFCount = 0;
         }
 
 
@@ -190,6 +191,10 @@ namespace pdfReducerCloud.Controller
                 _stats.TotalInputSize += inputSize;
                 _stats.TotalOutputSize += outputSize;
                 _stats.ReductionRatio = StatsComputationUtilities.ComputeReductionRatio(_stats.TotalInputSize, _stats.TotalOutputSize);
+            }
+            else
+            {
+                _stats.FileConvertedToPDFCount += 1;
             }
         }
     }

@@ -23,5 +23,6 @@ namespace pdfReducerCloud.Models
         public double TotalInputSize;
         public double TotalOutputSize;
         public double ReductionRatio;
+        public int FileConvertedToPDFCount;
     }
 }

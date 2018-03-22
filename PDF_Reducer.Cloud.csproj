@@ -226,7 +226,6 @@
     </Compile>
     <Compile Include="PdfReducerGlobals.cs" />
     <Compile Include="Controller\PDFReducerController.cs" />
-    <Compile Include="Models\PDFReducerStats.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">

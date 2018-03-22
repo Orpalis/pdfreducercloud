@@ -39,8 +39,6 @@ namespace pdfReducerCloud.Controller
 {
     internal sealed class PDFReducerController : PassportPDFAppControllerBase
     {
-        private PDFReducerStats _stats;
-
         public PDFReducerController(bool autoRun, string[] args) : base(
             new PassportPDFDesktopAppInformation(PdfReducerGlobals.PRODUCT_NAME, PdfReducerGlobals.PASSPORT_PDF_APP_ID,
                 PdfReducerGlobals.APP_EXECUTABLE_NAME, AssemblyUtilities.GetVersion(),
@@ -84,9 +82,9 @@ namespace pdfReducerCloud.Controller
 
                 string elapsedTime = ParsingUtils.GetElapsedTimeString(_stopwatch.Elapsed.Hours, _stopwatch.Elapsed.Minutes, _stopwatch.Elapsed.Seconds, _stopwatch.Elapsed.Milliseconds / 10);
 
-                _view.NotifyOperationsResult(LogMessagesUtils.GetReductionWorkCompletionText(_operationsStats.ProcessedFileCount, _operationsStats.SuccesfullyProcessedFileCount, _operationsStats.UnsuccesfullyProcessedFileCount, _stats.TotalInputSize, _stats.TotalOutputSize, elapsedTime));
+                _view.NotifyOperationsResult(LogMessagesUtils.GetReductionWorkCompletionText(_operationsStats.ProcessedFileCount, _operationsStats.SuccesfullyProcessedFileCount, _operationsStats.UnsuccesfullyProcessedFileCount, _operationsStats.TotalInputSize, _operationsStats.TotalOutputSize, elapsedTime));
 
-                string detailedWorkCompletionMessage = LogMessagesUtils.GetDetailedReductionWorkCompletionText(_operationsStats.ProcessedFileCount, _operationsStats.SuccesfullyProcessedFileCount, _operationsStats.UnsuccesfullyProcessedFileCount, _stats.FileConvertedToPDFCount, _stats.TotalInputSize, _stats.TotalOutputSize, elapsedTime);
+                string detailedWorkCompletionMessage = LogMessagesUtils.GetDetailedReductionWorkCompletionText(_operationsStats.ProcessedFileCount, _operationsStats.SuccesfullyProcessedFileCount, _operationsStats.UnsuccesfullyProcessedFileCount, _operationsStats.FileConvertedToPDFCount, _operationsStats.TotalInputSize, _operationsStats.TotalOutputSize, elapsedTime);
 
                 if (!_appInfo.AutoRun)
                 {
@@ -168,19 +166,8 @@ namespace pdfReducerCloud.Controller
 
             if (!fileOperationsResult.ConvertedToPDF)
             {
-                ((IPDFReducerCloudMainView)_view).NotifyReductionRatioChange(100 - _stats.ReductionRatio);
+                ((IPDFReducerCloudMainView)_view).NotifyReductionRatioChange(100 - _operationsStats.ReductionRatio);
             }
-        }
-
-
-        protected override void ResetStats()
-        {
-            base.ResetStats();
-
-            _stats.TotalInputSize = 0;
-            _stats.TotalOutputSize = 0;
-            _stats.ReductionRatio = 0;
-            _stats.FileConvertedToPDFCount = 0;
         }
 
 
@@ -188,13 +175,13 @@ namespace pdfReducerCloud.Controller
         {
             if (!convertedToPDF)
             {
-                _stats.TotalInputSize += inputSize;
-                _stats.TotalOutputSize += outputSize;
-                _stats.ReductionRatio = StatsComputationUtilities.ComputeReductionRatio(_stats.TotalInputSize, _stats.TotalOutputSize);
+                _operationsStats.TotalInputSize += inputSize;
+                _operationsStats.TotalOutputSize += outputSize;
+                _operationsStats.ReductionRatio = StatsComputationUtilities.ComputeReductionRatio(_operationsStats.TotalInputSize, _operationsStats.TotalOutputSize);
             }
             else
             {
-                _stats.FileConvertedToPDFCount += 1;
+                _operationsStats.FileConvertedToPDFCount += 1;
             }
         }
     }

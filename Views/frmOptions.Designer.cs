@@ -48,6 +48,7 @@
             this.lbResolution = new System.Windows.Forms.Label();
             this.lbQuality = new System.Windows.Forms.Label();
             this.tabContentRemoval = new System.Windows.Forms.TabPage();
+            this.chkRemoveBlankPages = new System.Windows.Forms.CheckBox();
             this.chkRemoveHyperlinks = new System.Windows.Forms.CheckBox();
             this.chkPackDocument = new System.Windows.Forms.CheckBox();
             this.lbDocumentContent = new System.Windows.Forms.Label();
@@ -301,6 +302,7 @@
             // 
             // tabContentRemoval
             // 
+            this.tabContentRemoval.Controls.Add(this.chkRemoveBlankPages);
             this.tabContentRemoval.Controls.Add(this.chkRemoveHyperlinks);
             this.tabContentRemoval.Controls.Add(this.chkPackDocument);
             this.tabContentRemoval.Controls.Add(this.lbDocumentContent);
@@ -315,6 +317,16 @@
             this.tabContentRemoval.TabIndex = 4;
             this.tabContentRemoval.Text = "Content Removal";
             this.tabContentRemoval.UseVisualStyleBackColor = true;
+            // 
+            // chkRemoveBlankPages
+            // 
+            this.chkRemoveBlankPages.AutoSize = true;
+            this.chkRemoveBlankPages.Location = new System.Drawing.Point(34, 195);
+            this.chkRemoveBlankPages.Name = "chkRemoveBlankPages";
+            this.chkRemoveBlankPages.Size = new System.Drawing.Size(127, 17);
+            this.chkRemoveBlankPages.TabIndex = 12;
+            this.chkRemoveBlankPages.Text = "Remove blank pages";
+            this.chkRemoveBlankPages.UseVisualStyleBackColor = true;
             // 
             // chkRemoveHyperlinks
             // 
@@ -539,5 +551,6 @@
         private System.Windows.Forms.Label lbDpi;
         private System.Windows.Forms.CheckBox chkPackFonts;
         private System.Windows.Forms.CheckBox chkJBIG2;
+        private System.Windows.Forms.CheckBox chkRemoveBlankPages;
     }
 }

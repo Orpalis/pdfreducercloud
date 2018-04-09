@@ -115,7 +115,7 @@
     "Name": "label_passportToolStripMenuItem",
     "ResourceIDs": "*",
     "LocalizedValue": {
-      "fr": "Passport",
+      "fr": "Passeport",
       "en": "Passport"
     }
   },
@@ -301,6 +301,14 @@
     "LocalizedValue": {
       "fr": "Supprimer les hyperliens",
       "en": "Remove hyperlinks"
+    }
+  },
+  {
+    "Name": "label_chkRemoveBlankPages",
+    "ResourceIDs": "*",
+    "LocalizedValue": {
+      "fr": "Supprimer les pages blanches",
+      "en": "Remove blank pages"
     }
   },
   {

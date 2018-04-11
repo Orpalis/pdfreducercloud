@@ -108,11 +108,11 @@
     <Reference Include="Orpalis.Globals.Localization, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\Orpalis.Globals.Localization.1.0.1\lib\netstandard1.3\Orpalis.Globals.Localization.dll</HintPath>
     </Reference>
-    <Reference Include="PassportPDF, Version=1.0.20.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\PassportPDF.1.0.20\lib\net461\PassportPDF.dll</HintPath>
+    <Reference Include="PassportPDF, Version=1.0.21.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\PassportPDF.1.0.21\lib\net461\PassportPDF.dll</HintPath>
     </Reference>
-    <Reference Include="PassportPDF.Tools.Framework, Version=1.0.10.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\PassportPDF.Tools.Framework.1.0.10\lib\netstandard2.0\PassportPDF.Tools.Framework.dll</HintPath>
+    <Reference Include="PassportPDF.Tools.Framework, Version=1.0.11.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\PassportPDF.Tools.Framework.1.0.11\lib\netstandard2.0\PassportPDF.Tools.Framework.dll</HintPath>
     </Reference>
     <Reference Include="PassportPDF.Tools.WinForm, Version=1.0.8.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\PassportPDF.Tools.WinForm.1.0.8\lib\net461\PassportPDF.Tools.WinForm.dll</HintPath>
@@ -294,11 +294,11 @@
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
-  <Import Project="packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets')" />
+  <Import Project="packages\NETStandard.Library.2.0.2\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('packages\NETStandard.Library.2.0.2\build\netstandard2.0\NETStandard.Library.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\NETStandard.Library.2.0.1\build\netstandard2.0\NETStandard.Library.targets'))" />
+    <Error Condition="!Exists('packages\NETStandard.Library.2.0.2\build\netstandard2.0\NETStandard.Library.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\NETStandard.Library.2.0.2\build\netstandard2.0\NETStandard.Library.targets'))" />
   </Target>
 </Project>

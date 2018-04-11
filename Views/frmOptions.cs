@@ -53,6 +53,7 @@ namespace pdfReducerCloud.Views
             chkRemoveFormFields.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_chkRemoveFormFields", FrameworkGlobals.ApplicationLanguage);
             chkRemoveHyperlinks.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_chkRemoveHyperlinks", FrameworkGlobals.ApplicationLanguage);
             chkRemoveBlankPages.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_chkRemoveBlankPages", FrameworkGlobals.ApplicationLanguage);
+            chkRemoveJavaScript.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_chkRemoveJavaScript", FrameworkGlobals.ApplicationLanguage);
             chkUseMRC.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_chkUseMRC", FrameworkGlobals.ApplicationLanguage);
             chkPackFonts.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_chkPackFonts", FrameworkGlobals.ApplicationLanguage);
             lbDocumentContent.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_lbDocumentContent", FrameworkGlobals.ApplicationLanguage);
@@ -100,6 +101,7 @@ namespace pdfReducerCloud.Views
             chkRemoveHyperlinks.Checked = (bool)PdfReducerGlobals.ReduceActionConfiguration.RemoveHyperlinks;
             chkRemoveEmbeddedFiles.Checked = (bool)PdfReducerGlobals.ReduceActionConfiguration.RemoveEmbeddedFiles;
             chkRemoveBlankPages.Checked = (bool)PdfReducerGlobals.ReduceActionConfiguration.RemoveBlankPages;
+            chkRemoveJavaScript.Checked = (bool)PdfReducerGlobals.ReduceActionConfiguration.RemoveJavaScript;
             chkJPEG2000.Checked = (bool)PdfReducerGlobals.ReduceActionConfiguration.EnableJPEG2000;
             chkJBIG2.Checked = (bool)PdfReducerGlobals.ReduceActionConfiguration.EnableJBIG2;
             chkUseMRC.Checked = (bool)PdfReducerGlobals.ReduceActionConfiguration.EnableMRC;
@@ -170,6 +172,7 @@ namespace pdfReducerCloud.Views
             PdfReducerGlobals.ReduceActionConfiguration.RemoveEmbeddedFiles = chkRemoveEmbeddedFiles.Checked;
             PdfReducerGlobals.ReduceActionConfiguration.RemoveHyperlinks = chkRemoveHyperlinks.Checked;
             PdfReducerGlobals.ReduceActionConfiguration.RemoveBlankPages = chkRemoveBlankPages.Checked;
+            PdfReducerGlobals.ReduceActionConfiguration.RemoveJavaScript = chkRemoveJavaScript.Checked;
             PdfReducerGlobals.ReduceActionConfiguration.EnableJPEG2000 = chkJPEG2000.Checked;
             PdfReducerGlobals.ReduceActionConfiguration.EnableJBIG2 = chkJBIG2.Checked;
             PdfReducerGlobals.ReduceActionConfiguration.EnableMRC = chkUseMRC.Checked;

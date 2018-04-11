@@ -312,6 +312,14 @@
     }
   },
   {
+    "Name": "label_chkRemoveJavaScript",
+    "ResourceIDs": "*",
+    "LocalizedValue": {
+      "fr": "Supprimer le JavaScript",
+      "en": "Remove JavaScript"
+    }
+  },
+  {
     "Name": "label_chkSubfolders",
     "ResourceIDs": "*",
     "LocalizedValue": {

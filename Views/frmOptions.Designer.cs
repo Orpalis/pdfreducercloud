@@ -65,6 +65,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolTipPreferredVersion = new System.Windows.Forms.ToolTip(this.components);
+            this.chkRemoveJavaScript = new System.Windows.Forms.CheckBox();
             this.tabGeneral.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabCompression.SuspendLayout();
@@ -302,6 +303,7 @@
             // 
             // tabContentRemoval
             // 
+            this.tabContentRemoval.Controls.Add(this.chkRemoveJavaScript);
             this.tabContentRemoval.Controls.Add(this.chkRemoveBlankPages);
             this.tabContentRemoval.Controls.Add(this.chkRemoveHyperlinks);
             this.tabContentRemoval.Controls.Add(this.chkPackDocument);
@@ -321,7 +323,7 @@
             // chkRemoveBlankPages
             // 
             this.chkRemoveBlankPages.AutoSize = true;
-            this.chkRemoveBlankPages.Location = new System.Drawing.Point(34, 195);
+            this.chkRemoveBlankPages.Location = new System.Drawing.Point(35, 104);
             this.chkRemoveBlankPages.Name = "chkRemoveBlankPages";
             this.chkRemoveBlankPages.Size = new System.Drawing.Size(127, 17);
             this.chkRemoveBlankPages.TabIndex = 12;
@@ -332,7 +334,7 @@
             // 
             this.chkRemoveHyperlinks.AutoSize = true;
             this.chkRemoveHyperlinks.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.chkRemoveHyperlinks.Location = new System.Drawing.Point(34, 81);
+            this.chkRemoveHyperlinks.Location = new System.Drawing.Point(276, 81);
             this.chkRemoveHyperlinks.Name = "chkRemoveHyperlinks";
             this.chkRemoveHyperlinks.Size = new System.Drawing.Size(116, 17);
             this.chkRemoveHyperlinks.TabIndex = 11;
@@ -343,7 +345,7 @@
             // 
             this.chkPackDocument.AutoSize = true;
             this.chkPackDocument.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.chkPackDocument.Location = new System.Drawing.Point(34, 172);
+            this.chkPackDocument.Location = new System.Drawing.Point(35, 81);
             this.chkPackDocument.Name = "chkPackDocument";
             this.chkPackDocument.Size = new System.Drawing.Size(137, 17);
             this.chkPackDocument.TabIndex = 10;
@@ -354,7 +356,7 @@
             // 
             this.lbDocumentContent.AutoSize = true;
             this.lbDocumentContent.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lbDocumentContent.Location = new System.Drawing.Point(15, 106);
+            this.lbDocumentContent.Location = new System.Drawing.Point(15, 15);
             this.lbDocumentContent.Name = "lbDocumentContent";
             this.lbDocumentContent.Size = new System.Drawing.Size(98, 13);
             this.lbDocumentContent.TabIndex = 9;
@@ -363,7 +365,7 @@
             // lbInteractiveContent
             // 
             this.lbInteractiveContent.AutoSize = true;
-            this.lbInteractiveContent.Location = new System.Drawing.Point(15, 15);
+            this.lbInteractiveContent.Location = new System.Drawing.Point(257, 15);
             this.lbInteractiveContent.Name = "lbInteractiveContent";
             this.lbInteractiveContent.Size = new System.Drawing.Size(99, 13);
             this.lbInteractiveContent.TabIndex = 8;
@@ -372,7 +374,7 @@
             // chkRemoveEmbeddedFiles
             // 
             this.chkRemoveEmbeddedFiles.AutoSize = true;
-            this.chkRemoveEmbeddedFiles.Location = new System.Drawing.Point(34, 149);
+            this.chkRemoveEmbeddedFiles.Location = new System.Drawing.Point(35, 58);
             this.chkRemoveEmbeddedFiles.Name = "chkRemoveEmbeddedFiles";
             this.chkRemoveEmbeddedFiles.Size = new System.Drawing.Size(140, 17);
             this.chkRemoveEmbeddedFiles.TabIndex = 7;
@@ -382,7 +384,7 @@
             // chkRemoveBookmarks
             // 
             this.chkRemoveBookmarks.AutoSize = true;
-            this.chkRemoveBookmarks.Location = new System.Drawing.Point(34, 126);
+            this.chkRemoveBookmarks.Location = new System.Drawing.Point(35, 35);
             this.chkRemoveBookmarks.Name = "chkRemoveBookmarks";
             this.chkRemoveBookmarks.Size = new System.Drawing.Size(121, 17);
             this.chkRemoveBookmarks.TabIndex = 6;
@@ -392,7 +394,7 @@
             // chkRemoveFormFields
             // 
             this.chkRemoveFormFields.AutoSize = true;
-            this.chkRemoveFormFields.Location = new System.Drawing.Point(34, 35);
+            this.chkRemoveFormFields.Location = new System.Drawing.Point(276, 35);
             this.chkRemoveFormFields.Name = "chkRemoveFormFields";
             this.chkRemoveFormFields.Size = new System.Drawing.Size(113, 17);
             this.chkRemoveFormFields.TabIndex = 4;
@@ -402,7 +404,7 @@
             // chkRemoveAnnotations
             // 
             this.chkRemoveAnnotations.AutoSize = true;
-            this.chkRemoveAnnotations.Location = new System.Drawing.Point(34, 58);
+            this.chkRemoveAnnotations.Location = new System.Drawing.Point(276, 58);
             this.chkRemoveAnnotations.Name = "chkRemoveAnnotations";
             this.chkRemoveAnnotations.Size = new System.Drawing.Size(124, 17);
             this.chkRemoveAnnotations.TabIndex = 5;
@@ -485,6 +487,17 @@
             // 
             this.toolTipPreferredVersion.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
+            // chkRemoveJavaScript
+            // 
+            this.chkRemoveJavaScript.AutoSize = true;
+            this.chkRemoveJavaScript.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.chkRemoveJavaScript.Location = new System.Drawing.Point(276, 104);
+            this.chkRemoveJavaScript.Name = "chkRemoveJavaScript";
+            this.chkRemoveJavaScript.Size = new System.Drawing.Size(119, 17);
+            this.chkRemoveJavaScript.TabIndex = 13;
+            this.chkRemoveJavaScript.Text = "Remove JavaScript";
+            this.chkRemoveJavaScript.UseVisualStyleBackColor = true;
+            // 
             // frmOptions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -552,5 +565,6 @@
         private System.Windows.Forms.CheckBox chkPackFonts;
         private System.Windows.Forms.CheckBox chkJBIG2;
         private System.Windows.Forms.CheckBox chkRemoveBlankPages;
+        private System.Windows.Forms.CheckBox chkRemoveJavaScript;
     }
 }

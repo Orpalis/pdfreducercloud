@@ -296,14 +296,6 @@
     }
   },
   {
-    "Name": "label_tabGeneral",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Général",
-      "en": "General"
-    }
-  },
-  {
     "Name": "label_tabOutputFormat",
     "ResourceIDs": "*",
     "LocalizedValue": {
@@ -325,6 +317,22 @@
     "LocalizedValue": {
       "fr": "Version préférée:",
       "en": "Preferred version:"
+    }
+  },
+  {
+    "Name": "label_CompRatio",
+    "ResourceIDs": "*",
+    "LocalizedValue": {
+      "fr": "Place gagnée:",
+      "en": "Saved space:"
+    }
+  },
+  {
+    "Name": "label_tooltipPreferredVersionTitle",
+    "ResourceIDs": "*",
+    "LocalizedValue": {
+      "fr": "Version préférée",
+      "en": "Preferred version"
     }
   }
 ]

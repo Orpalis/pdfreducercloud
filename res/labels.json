@@ -1,173 +1,5 @@
 [
   {
-    "Name": "label_aboutToolStripMenuItem",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "A propos…",
-      "en": "About…"
-    }
-  },
-  {
-    "Name": "label_cmdRun",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Démarrer",
-      "en": "Start"
-    }
-  },
-  {
-    "Name": "label_communityForumsToolStripMenuItem",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Forums",
-      "en": "Community Forums"
-    }
-  },
-  {
-    "Name": "label_exitToolStripMenuItem",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Quitter",
-      "en": "Exit"
-    }
-  },
-  {
-    "Name": "label_facebookToolStripMenuItem",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Page Facebook",
-      "en": "Facebook Community"
-    }
-  },
-  {
-    "Name": "label_fileToolStripMenuItem",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Fichier",
-      "en": "File"
-    }
-  },
-  {
-    "Name": "label_helpToolStripMenuItem",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "?",
-      "en": "?"
-    }
-  },
-  {
-    "Name": "label_languageToolStripMenuItem",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Langue",
-      "en": "Language"
-    }
-  },
-  {
-    "Name": "label_CompRatio",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Place gagnée:",
-      "en": "Saved space:"
-    }
-  },
-  {
-    "Name": "label_tabErrors",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Erreurs",
-      "en": "Errors"
-    }
-  },
-  {
-    "Name": "label_TabProcessLogs",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Journal",
-      "en": "Logs"
-    }
-  },
-  {
-    "Name": "label_TabStatus",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Statut",
-      "en": "Status"
-    }
-  },
-  {
-    "Name": "label_TabWarnings",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Avertissements",
-      "en": "Warnings"
-    }
-  },
-  {
-    "Name": "label_optionsToolStripMenuItem",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Options",
-      "en": "Options"
-    }
-  },
-  {
-    "Name": "label_passportToolStripMenuItem",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Passeport",
-      "en": "Passport"
-    }
-  },
-  {
-    "Name": "label_lbSrcFolder",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Source:",
-      "en": "Source:"
-    }
-  },
-  {
-    "Name": "label_lbThreads",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Threads:",
-      "en": "Threads:"
-    }
-  },
-  {
-    "Name": "label_lbDstFolder",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Destination:",
-      "en": "Destination:"
-    }
-  },
-  {
-    "Name": "label_cmdBrowseDest",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": ". . . ",
-      "en": ". . ."
-    }
-  },
-  {
-    "Name": "label_btApply",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "OK",
-      "en": "OK"
-    }
-  },
-  {
-    "Name": "label_btReset",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Config. par défaut",
-      "en": "Reset to default"
-    }
-  },
-  {
     "Name": "label_chkCharRepair",
     "ResourceIDs": "*",
     "LocalizedValue": {
@@ -197,14 +29,6 @@
     "LocalizedValue": {
       "fr": "Activer la détection de couleur",
       "en": "Enable color detection"
-    }
-  },
-  {
-    "Name": "label_chkExportLogsToOutputFolder",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Exporter les logs vers le répertoire de destination",
-      "en": "Export logs to destination folder"
     }
   },
   {
@@ -320,14 +144,6 @@
     }
   },
   {
-    "Name": "label_chkSubfolders",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Traiter les sous répertoires",
-      "en": "Process subfolders"
-    }
-  },
-  {
     "Name": "label_chkUseMRC",
     "ResourceIDs": "*",
     "LocalizedValue": {
@@ -341,14 +157,6 @@
     "LocalizedValue": {
       "fr": "Optimiser les polices",
       "en": "Optimize fonts"
-    }
-  },
-  {
-    "Name": "label_chkWarnSameInputOutputFolder",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Avertir lorsque le répertoire d'entrée et de sortie sont identiques",
-      "en": "Warn when source and destination directories are identical"
     }
   },
   {
@@ -448,14 +256,6 @@
     }
   },
   {
-    "Name": "label_lbCreatedFromScanner",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "PDF issu(s) d'un scanner ?",
-      "en": "PDF created from scanner?"
-    }
-  },
-  {
     "Name": "label_lbDpi",
     "ResourceIDs": "*",
     "LocalizedValue": {
@@ -477,30 +277,6 @@
     "LocalizedValue": {
       "fr": "Résolution finale:",
       "en": "Downscale resolution:"
-    }
-  },
-  {
-    "Name": "label_rbScannerNo",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Non",
-      "en": "No"
-    }
-  },
-  {
-    "Name": "label_rbScannerYes",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Oui",
-      "en": "Yes"
-    }
-  },
-  {
-    "Name": "label_rbScannerUnknown",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Inconnu (détection automatique)",
-      "en": "Unknown (auto-detect)"
     }
   },
   {
@@ -549,214 +325,6 @@
     "LocalizedValue": {
       "fr": "Version préférée:",
       "en": "Preferred version:"
-    }
-  },
-  {
-    "Name": "label_btCancel",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Annuler",
-      "en": "Cancel"
-    }
-  },
-  {
-    "Name": "label_btSave",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Sauvegarder",
-      "en": "Save"
-    }
-  },
-  {
-    "Name": "label_rtbRegisterPassportInstructions",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Veuillez entrer votre numéro de passeport ci-dessous.\nPour en obtenir un, cela ne vous prendra que quelques secondes. Veuillez simplement créer un compte sur https://www.passportpdf.com avant de récupérer votre numéro de passeport depuis la section \"Mon Compte\" !",
-      "en": "Please enter your Passport Number below.\nIt only takes a few seconds to get one! All you need to do is create an account at https://www.passportpdf.com and then get your Passport Number from the \"My Account\" section!"
-    }
-  },
-  {
-    "Name": "label_btCloseAbout",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Fermer",
-      "en": "Close"
-    }
-  },
-  {
-    "Name": "label_lbCopyright",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Copyright © ORPALIS 2017 - 2018",
-      "en": "Copyright © ORPALIS 2017 - 2018"
-    }
-  },
-  {
-    "Name": "label_lbBasedOn",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Basé sur PassportPDF:",
-      "en": "Based on PassportPDF:"
-    }
-  },
-  {
-    "Name": "label_lkPassportPdfWebsite",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "https://www.passportpdf.com",
-      "en": "https://www.passportpdf.com"
-    }
-  },
-  {
-    "Name": "label_lkOrpalisWebsite",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "http://www.orpalis.com",
-      "en": "http://www.orpalis.com"
-    }
-  },
-  {
-    "Name": "label_frmRegisterPassportTitle",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Entrez votre numéro de passeport PassportPDF ",
-      "en": "Enter your PassportPDF Passport Number"
-    }
-  },
-  {
-    "Name": "label_passportInfoTitle",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Gestion du passeport",
-      "en": "Passport Management"
-    }
-  },
-  {
-    "Name": "label_lbPassportInfoPassportId",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Numéro de passeport:",
-      "en": "Passport Number:"
-    }
-  },
-  {
-    "Name": "label_lbPassportStatus",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Statut:",
-      "en": "Status:"
-    }
-  },
-  {
-    "Name": "label_lbSubscriptionDate",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Date de souscription:",
-      "en": "Subscription Date:"
-    }
-  },
-  {
-    "Name": "label_lbUsedTokens",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Crédits utilisés:",
-      "en": "Used Tokens:"
-    }
-  },
-  {
-    "Name": "label_rtbPassportInfoInstructions",
-    "ResourceIDs": "",
-    "LocalizedValue": {
-      "fr": "Veuillez trouver ci-dessous les informations relatives au passeport actuellement utilisé.\nVous pouvez utiliser un passeport différent à n'importe quel moment en cliquant simplement sur le stylo à côté du numéro de passeport.\nPour obtenir plus d'informations à propos de votre passeport, rendez vous dans la rubrique \"Mon Compte\" sur http://www.passportpdf.com",
-      "en": "Here are the information related the Passport currently being used. \nYou can use another Passport at any time by clicking the pen next to the Passport Number. \nIn order to obtain full information about your Passport, please visit the \"My Account\" page at http://www.passportpdf.com\n"
-    }
-  },
-  {
-    "Name": "label_tooltipPreferredVersionTitle",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Version préférée",
-      "en": "Preferred version"
-    }
-  },
-  {
-    "Name": "label_frmMustUpdate",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Mise à jour requise",
-      "en": "Update required"
-    }
-  },
-  {
-    "Name": "label_txtMustUpdate",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Désolé, la version actuelle de l'application n'est plus supportée par l'API PassportPDF. Veuillez s'il-vous-plaît procéder à une mise à jour pour continuer à l'utiliser.",
-      "en": "Sorry, the current version of the app is no longer supported by the PassportPDF API. Please proceed to an update in order to continue using it."
-    }
-  },
-  {
-    "Name": "label_btUpdateNow",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Télécharger et installer",
-      "en": "Download and install"
-    }
-  },
-  {
-    "Name": "label_frmUpdateInProgress",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Mise à jour en cours",
-      "en": "Update in progress"
-    }
-  },
-  {
-    "Name": "label_txtUpdating",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Téléchargement de la dernière version de #application_name…",
-      "en": "Downloading the last version of #application_name…"
-    }
-  },
-  {
-    "Name": "label_txtNewVersionAvailable",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "#application_name version #version_number est disponible ! Que souhaitez-vous faire ?",
-      "en": "#application_name version #version_number is available! What do you want to do?"
-    }
-  },
-  {
-    "Name": "label_btIgnoreUpdate",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Ignorer pour le moment",
-      "en": "Ignore for now"
-    }
-  },
-  {
-    "Name": "label_frmNewVersionAvailable",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Nouvelle version disponible",
-      "en": "New version available"
-    }
-  },
-  {
-    "Name": "label_chkAutomaticallyCheckForUpdates",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Vérifier automatiquement les mises à jour",
-      "en": "Automatically check for updates"
-    }
-  },
-  {
-    "Name": "label_checkForLatestUpdateToolStripMenuItem",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Rechercher la dernière mise à jour",
-      "en": "Check for latest update"
     }
   }
 ]

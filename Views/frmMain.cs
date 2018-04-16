@@ -56,6 +56,7 @@ namespace pdfReducerCloud.Views
             lbCompRatioPct.Visible = false;
         }
 
+
         protected override void LoadLabels()
         {
             base.LoadLabels();

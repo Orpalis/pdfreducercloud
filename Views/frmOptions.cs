@@ -26,7 +26,7 @@ namespace pdfReducerCloud.Views
 {
     public partial class frmOptions : PassportPDF.Tools.WinForm.Views.frmOptionsBase
     {
-        public frmOptions() : base(global::pdfReducerCloud.Properties.Resources.banner_pdf_reducer_cloud)
+        public frmOptions() : base(Properties.Resources.banner_pdf_reducer_cloud)
         {
             InitializeComponent();
         }
@@ -77,7 +77,7 @@ namespace pdfReducerCloud.Views
             PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbPreferredVersion.Items2", FrameworkGlobals.ApplicationLanguage),
             PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbPreferredVersion.Items3", FrameworkGlobals.ApplicationLanguage),
             PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbPreferredVersion.Items4", FrameworkGlobals.ApplicationLanguage)});
-            toolTipPreferredVersion.SetToolTip(this.cmbPreferredVersion, PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbPreferredVersion.ToolTip", FrameworkGlobals.ApplicationLanguage));
+            toolTipPreferredVersion.SetToolTip(cmbPreferredVersion, PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbPreferredVersion.ToolTip", FrameworkGlobals.ApplicationLanguage));
             toolTipPreferredVersion.ToolTipTitle = PdfReducerGlobals.LabelsLocalizer.GetString("label_tooltipPreferredVersionTitle", FrameworkGlobals.ApplicationLanguage);
         }
 
@@ -89,28 +89,28 @@ namespace pdfReducerCloud.Views
             chkDeleteOriginalFileOnSuccess.Checked = FrameworkGlobals.ApplicationConfiguration.FileProductionRules.DeleteOriginalFileOnSuccess;
             chkOnlyPdf.Checked = FrameworkGlobals.ApplicationConfiguration.OnlyProcessPDF;
 
-            chkEnableColorDetection.Checked = (bool)PdfReducerGlobals.ReduceActionConfiguration.EnableColorDetection;
-            chkRecompressImages.Checked = (bool)PdfReducerGlobals.ReduceActionConfiguration.RecompressImages;
-            chkPackDocument.Checked = (bool)PdfReducerGlobals.ReduceActionConfiguration.PackDocument;
-            chkDownscaleImages.Checked = (bool)PdfReducerGlobals.ReduceActionConfiguration.DownscaleImages;
-            nuDownscaleResolution.Value = (int)PdfReducerGlobals.ReduceActionConfiguration.DownscaleResolution;
-            chkFastWebView.Checked = (bool)PdfReducerGlobals.ReduceActionConfiguration.FastWebView;
-            chkRemoveAnnotations.Checked = (bool)PdfReducerGlobals.ReduceActionConfiguration.RemoveAnnotations;
-            chkRemoveBookmarks.Checked = (bool)PdfReducerGlobals.ReduceActionConfiguration.RemoveBookmarks;
-            chkRemoveFormFields.Checked = (bool)PdfReducerGlobals.ReduceActionConfiguration.RemoveFormFields;
-            chkRemoveHyperlinks.Checked = (bool)PdfReducerGlobals.ReduceActionConfiguration.RemoveHyperlinks;
-            chkRemoveEmbeddedFiles.Checked = (bool)PdfReducerGlobals.ReduceActionConfiguration.RemoveEmbeddedFiles;
-            chkRemoveBlankPages.Checked = (bool)PdfReducerGlobals.ReduceActionConfiguration.RemoveBlankPages;
-            chkRemoveJavaScript.Checked = (bool)PdfReducerGlobals.ReduceActionConfiguration.RemoveJavaScript;
-            chkJPEG2000.Checked = (bool)PdfReducerGlobals.ReduceActionConfiguration.EnableJPEG2000;
-            chkJBIG2.Checked = (bool)PdfReducerGlobals.ReduceActionConfiguration.EnableJBIG2;
-            chkUseMRC.Checked = (bool)PdfReducerGlobals.ReduceActionConfiguration.EnableMRC;
+            chkEnableColorDetection.Checked = PdfReducerGlobals.ReduceActionConfiguration.EnableColorDetection;
+            chkRecompressImages.Checked = PdfReducerGlobals.ReduceActionConfiguration.RecompressImages;
+            chkPackDocument.Checked = PdfReducerGlobals.ReduceActionConfiguration.PackDocument;
+            chkDownscaleImages.Checked = PdfReducerGlobals.ReduceActionConfiguration.DownscaleImages;
+            nuDownscaleResolution.Value = PdfReducerGlobals.ReduceActionConfiguration.DownscaleResolution;
+            chkFastWebView.Checked = PdfReducerGlobals.ReduceActionConfiguration.FastWebView;
+            chkRemoveAnnotations.Checked = PdfReducerGlobals.ReduceActionConfiguration.RemoveAnnotations;
+            chkRemoveBookmarks.Checked = PdfReducerGlobals.ReduceActionConfiguration.RemoveBookmarks;
+            chkRemoveFormFields.Checked = PdfReducerGlobals.ReduceActionConfiguration.RemoveFormFields;
+            chkRemoveHyperlinks.Checked = PdfReducerGlobals.ReduceActionConfiguration.RemoveHyperlinks;
+            chkRemoveEmbeddedFiles.Checked = PdfReducerGlobals.ReduceActionConfiguration.RemoveEmbeddedFiles;
+            chkRemoveBlankPages.Checked = PdfReducerGlobals.ReduceActionConfiguration.RemoveBlankPages;
+            chkRemoveJavaScript.Checked = PdfReducerGlobals.ReduceActionConfiguration.RemoveJavaScript;
+            chkJPEG2000.Checked = PdfReducerGlobals.ReduceActionConfiguration.EnableJPEG2000;
+            chkJBIG2.Checked = PdfReducerGlobals.ReduceActionConfiguration.EnableJBIG2;
+            chkUseMRC.Checked = PdfReducerGlobals.ReduceActionConfiguration.EnableMRC;
             chkKeepWriteAcessTime.Checked = FrameworkGlobals.ApplicationConfiguration.FileProductionRules.KeepWriteAndAccessTime;
             chkPackFonts.Checked = PdfReducerGlobals.ReduceActionConfiguration.PackFonts;
 
             // Check whether mutually exclusive options should be disabled
             chkCharRepair.Enabled = PdfReducerGlobals.ReduceActionConfiguration.EnableColorDetection;
-            chkCharRepair.Checked = chkCharRepair.Enabled && (bool)PdfReducerGlobals.ReduceActionConfiguration.EnableCharRepair;
+            chkCharRepair.Checked = chkCharRepair.Enabled && PdfReducerGlobals.ReduceActionConfiguration.EnableCharRepair;
 
             switch (PdfReducerGlobals.ReduceActionConfiguration.OutputVersion)
             {

@@ -65,41 +65,6 @@ namespace pdfReducerCloud.Controller
         }
 
 
-        protected override void OnWorkerWorkCompletion(int workerNumber)
-        {
-            base.OnWorkerWorkCompletion(workerNumber);
-
-            _view.RemoveWorker(workerNumber);
-
-            if (_view.WorkerItemCount == 0)
-            {
-                _stopwatch.Stop();
-
-                if (FrameworkGlobals.LogsManager.Error != null)
-                {
-                    _view.NotifyOperationError(LogMessagesUtils.ReplaceMessageSequencesAndReferences(FrameworkGlobals.MessagesLocalizer.GetString("message_logs_exportation_failure", FrameworkGlobals.ApplicationLanguage), additionalMessage: FrameworkGlobals.LogsManager.Error.Message));
-                }
-
-                string elapsedTime = ParsingUtils.GetElapsedTimeString(_stopwatch.Elapsed.Hours, _stopwatch.Elapsed.Minutes, _stopwatch.Elapsed.Seconds, _stopwatch.Elapsed.Milliseconds / 10);
-
-                _view.NotifyOperationsResult(LogMessagesUtils.GetReductionWorkCompletionText(_operationsStats.ProcessedFileCount, _operationsStats.SuccesfullyProcessedFileCount, _operationsStats.UnsuccesfullyProcessedFileCount, _operationsStats.TotalInputSize, _operationsStats.TotalOutputSize, elapsedTime));
-
-                string detailedWorkCompletionMessage = LogMessagesUtils.GetDetailedReductionWorkCompletionText(_operationsStats.ProcessedFileCount, _operationsStats.SuccesfullyProcessedFileCount, _operationsStats.UnsuccesfullyProcessedFileCount, _operationsStats.FileConvertedToPDFCount, _operationsStats.TotalInputSize, _operationsStats.TotalOutputSize, elapsedTime);
-
-                if (!_appInfo.AutoRun)
-                {
-                    _view.PromptInformationMessage(detailedWorkCompletionMessage, FrameworkGlobals.MessagesLocalizer.GetString("processTerminated", FrameworkGlobals.ApplicationLanguage));
-                    _view.UnlockView();
-                }
-                else
-                {
-                    Console.Write(detailedWorkCompletionMessage);
-                    _view.ExitApplication();
-                }
-            }
-        }
-
-
         protected override bool InitializeAppConfiguration()
         {
             if (!base.InitializeAppConfiguration())
@@ -134,18 +99,6 @@ namespace pdfReducerCloud.Controller
         }
 
 
-        protected override void HandleApplicationClosing()
-        {
-            base.HandleApplicationClosing();
-
-            if (!_appInfo.AutoRun && (!ConfigurationManager.SaveConfiguration(PdfReducerGlobals.GetApplicationConfigurationFilePath(), FrameworkGlobals.ApplicationConfiguration) ||
-                !ConfigurationManager.SaveConfiguration(PdfReducerGlobals.GetReduceActionConfigurationFilePath(), PdfReducerGlobals.ReduceActionConfiguration)))
-            {
-                MessageBox.Show(FrameworkGlobals.MessagesLocalizer.GetString("saveConfigurationFailure", FrameworkGlobals.ApplicationLanguage), FrameworkGlobals.MessagesLocalizer.GetString("saveConfigurationFailureTitle", FrameworkGlobals.ApplicationLanguage), MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-
         protected override void OnFileOperationsCompletion(FileOperationsResult fileOperationsResult)
         {
             base.OnFileOperationsCompletion(fileOperationsResult);
@@ -167,6 +120,47 @@ namespace pdfReducerCloud.Controller
             if (!fileOperationsResult.ConvertedToPDF)
             {
                 ((IPDFReducerCloudMainView)_view).NotifyReductionRatioChange(100 - _operationsStats.ReductionRatio);
+            }
+        }
+
+
+        protected override void OnWorkerWorkCompletion(int workerNumber)
+        {
+            base.OnWorkerWorkCompletion(workerNumber);
+        }
+
+
+        protected override void OnOperationsCompletion()
+        {
+            base.OnOperationsCompletion();
+
+            string elapsedTime = ParsingUtils.GetElapsedTimeString(_stopwatch.Elapsed.Hours, _stopwatch.Elapsed.Minutes, _stopwatch.Elapsed.Seconds, _stopwatch.Elapsed.Milliseconds / 10);
+
+            _view.NotifyOperationsResult(LogMessagesUtils.GetReductionWorkCompletionText(_operationsStats.ProcessedFileCount, _operationsStats.SuccesfullyProcessedFileCount, _operationsStats.UnsuccesfullyProcessedFileCount, _operationsStats.TotalInputSize, _operationsStats.TotalOutputSize, elapsedTime));
+
+            string detailedWorkCompletionMessage = LogMessagesUtils.GetDetailedReductionWorkCompletionText(_operationsStats.ProcessedFileCount, _operationsStats.SuccesfullyProcessedFileCount, _operationsStats.UnsuccesfullyProcessedFileCount, _operationsStats.FileConvertedToPDFCount, _operationsStats.TotalInputSize, _operationsStats.TotalOutputSize, elapsedTime);
+
+            if (!_appInfo.AutoRun)
+            {
+                _view.PromptInformationMessage(detailedWorkCompletionMessage, FrameworkGlobals.MessagesLocalizer.GetString("processTerminated", FrameworkGlobals.ApplicationLanguage));
+                _view.UnlockView();
+            }
+            else
+            {
+                Console.Write(detailedWorkCompletionMessage);
+                _view.ExitApplication();
+            }
+        }
+
+
+        protected override void HandleApplicationClosing()
+        {
+            base.HandleApplicationClosing();
+
+            if (!_appInfo.AutoRun && (!ConfigurationManager.SaveConfiguration(PdfReducerGlobals.GetApplicationConfigurationFilePath(), FrameworkGlobals.ApplicationConfiguration) ||
+                !ConfigurationManager.SaveConfiguration(PdfReducerGlobals.GetReduceActionConfigurationFilePath(), PdfReducerGlobals.ReduceActionConfiguration)))
+            {
+                MessageBox.Show(FrameworkGlobals.MessagesLocalizer.GetString("saveConfigurationFailure", FrameworkGlobals.ApplicationLanguage), FrameworkGlobals.MessagesLocalizer.GetString("saveConfigurationFailureTitle", FrameworkGlobals.ApplicationLanguage), MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

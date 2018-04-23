@@ -31,6 +31,7 @@ using PassportPDF.Tools.Framework.Business;
 using PassportPDF.Tools.Framework.Configuration;
 using PassportPDF.Tools.WinForm.Controllers;
 using PassportPDF.Tools.WinForm.Models;
+using PassportPDF.Tools.WinForm.Utilities;
 using pdfReducerCloud.Utilities;
 using pdfReducerCloud.Models;
 using pdfReducerCloud.Views;

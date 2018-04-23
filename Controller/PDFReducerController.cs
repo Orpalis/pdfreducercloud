@@ -40,11 +40,11 @@ namespace pdfReducerCloud.Controller
     internal sealed class PDFReducerController : PassportPDFAppControllerBase
     {
         public PDFReducerController(bool autoRun, string[] args) : base(
-            new PassportPDFDesktopAppInformation(PdfReducerGlobals.PRODUCT_NAME, PdfReducerGlobals.PASSPORT_PDF_APP_ID,
-                PdfReducerGlobals.APP_EXECUTABLE_NAME, AssemblyUtilities.GetVersion(),
-                Icon.ExtractAssociatedIcon(Assembly.GetExecutingAssembly().Location),
-                global::pdfReducerCloud.Properties.Resources.pdf_reducer_cloud_final_logo,
-                PdfReducerGlobals.GetApplicationConfigurationFilePath(), autoRun, args))
+            new PassportPDFDesktopAppInformation(
+                PdfReducerGlobals.PRODUCT_NAME, PdfReducerGlobals.PASSPORT_PDF_APP_ID,
+                PdfReducerGlobals.APP_EXECUTABLE_NAME, PdfReducerGlobals.SOURCE_CODE_URL,
+                AssemblyUtilities.GetVersion(), Icon.ExtractAssociatedIcon(Assembly.GetExecutingAssembly().Location),
+                Properties.Resources.pdf_reducer_cloud_final_logo, PdfReducerGlobals.GetApplicationConfigurationFilePath(), autoRun, args))
         { }
 
 

@@ -80,6 +80,14 @@
     }
   },
   {
+    "Name": "label_chkPackFonts",
+    "ResourceIDs": "*",
+    "LocalizedValue": {
+      "fr": "Optimiser les polices",
+      "en": "Optimize fonts"
+    }
+  },
+  {
     "Name": "label_chkRecompressImages",
     "ResourceIDs": "*",
     "LocalizedValue": {
@@ -93,6 +101,14 @@
     "LocalizedValue": {
       "fr": "Supprimer les annotations",
       "en": "Remove annotations"
+    }
+  },
+  {
+    "Name": "label_chkRemoveBlankPages",
+    "ResourceIDs": "*",
+    "LocalizedValue": {
+      "fr": "Supprimer les pages blanches",
+      "en": "Remove blank pages"
     }
   },
   {
@@ -128,14 +144,6 @@
     }
   },
   {
-    "Name": "label_chkRemoveBlankPages",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Supprimer les pages blanches",
-      "en": "Remove blank pages"
-    }
-  },
-  {
     "Name": "label_chkRemoveJavaScript",
     "ResourceIDs": "*",
     "LocalizedValue": {
@@ -149,22 +157,6 @@
     "LocalizedValue": {
       "fr": "Activer la compression MRC (Mixed raster content)",
       "en": "Enable MRC (Mixed raster content) compression"
-    }
-  },
-  {
-    "Name": "label_chkPackFonts",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Optimiser les polices",
-      "en": "Optimize fonts"
-    }
-  },
-  {
-    "Name": "label_cmbPreferredVersion.ToolTip",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Pour les PDF, la version de sortie ne\npeut être inférieure à l'originale.\nPour les autres formats, celle-ci peut être\nn'importe laquelle parmi celles disponibles.",
-      "en": "For PDF files, the output version can \nnot be lower than the original one.\nFor other formats, the version can be \nany from among those available."
     }
   },
   {
@@ -240,11 +232,35 @@
     }
   },
   {
+    "Name": "label_cmbPreferredVersion.ToolTip",
+    "ResourceIDs": "*",
+    "LocalizedValue": {
+      "fr": "Pour les PDF, la version de sortie ne\npeut être inférieure à l'originale.\nPour les autres formats, celle-ci peut être\nn'importe laquelle parmi celles disponibles.",
+      "en": "For PDF files, the output version can \nnot be lower than the original one.\nFor other formats, the version can be \nany from among those available."
+    }
+  },
+  {
+    "Name": "label_CompRatio",
+    "ResourceIDs": "*",
+    "LocalizedValue": {
+      "fr": "Place gagnée:",
+      "en": "Saved space:"
+    }
+  },
+  {
     "Name": "label_lbDocumentContent",
     "ResourceIDs": "*",
     "LocalizedValue": {
       "fr": "Contenu du document:",
       "en": "Document content:"
+    }
+  },
+  {
+    "Name": "label_lbDpi",
+    "ResourceIDs": "*",
+    "LocalizedValue": {
+      "fr": "dpi",
+      "en": "dpi"
     }
   },
   {
@@ -256,11 +272,11 @@
     }
   },
   {
-    "Name": "label_lbDpi",
+    "Name": "label_lbPreferredVersion",
     "ResourceIDs": "*",
     "LocalizedValue": {
-      "fr": "dpi",
-      "en": "dpi"
+      "fr": "Version préférée:",
+      "en": "Preferred version:"
     }
   },
   {
@@ -288,6 +304,14 @@
     }
   },
   {
+    "Name": "label_tabCompression",
+    "ResourceIDs": "*",
+    "LocalizedValue": {
+      "fr": "Compression",
+      "en": "Compression"
+    }
+  },
+  {
     "Name": "label_tabContentRemoval",
     "ResourceIDs": "*",
     "LocalizedValue": {
@@ -301,30 +325,6 @@
     "LocalizedValue": {
       "fr": "Format de sortie",
       "en": "Output Format"
-    }
-  },
-  {
-    "Name": "label_tabCompression",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Compression",
-      "en": "Compression"
-    }
-  },
-  {
-    "Name": "label_lbPreferredVersion",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Version préférée:",
-      "en": "Preferred version:"
-    }
-  },
-  {
-    "Name": "label_CompRatio",
-    "ResourceIDs": "*",
-    "LocalizedValue": {
-      "fr": "Place gagnée:",
-      "en": "Saved space:"
     }
   },
   {

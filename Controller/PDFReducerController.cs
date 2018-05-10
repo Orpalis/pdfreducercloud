@@ -81,7 +81,7 @@ namespace pdfReducerCloud.Controller
                 }
                 catch (Exception)
                 {
-                    MessageBox.Show(FrameworkGlobals.MessagesLocalizer.GetString("readReduceConfigurationFailure", FrameworkGlobals.ApplicationLanguage), FrameworkGlobals.MessagesLocalizer.GetString("readConfigurationFailureTitle", FrameworkGlobals.ApplicationLanguage), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    DialogUtilities.ShowErrorMessage(FrameworkGlobals.MessagesLocalizer.GetString("readReduceConfigurationFailure", FrameworkGlobals.ApplicationLanguage), FrameworkGlobals.MessagesLocalizer.GetString("readConfigurationFailureTitle", FrameworkGlobals.ApplicationLanguage));
                     PdfReducerGlobals.ReduceActionConfiguration = ConfigurationManager.ResetDefaultReduceActionConfiguration();
                 }
             }
@@ -143,7 +143,7 @@ namespace pdfReducerCloud.Controller
 
             if (!_appInfo.AutoRun)
             {
-                _view.PromptInformationMessage(detailedWorkCompletionMessage, FrameworkGlobals.MessagesLocalizer.GetString("processTerminated", FrameworkGlobals.ApplicationLanguage));
+                DialogUtilities.ShowInformationMessage(detailedWorkCompletionMessage, FrameworkGlobals.MessagesLocalizer.GetString("processTerminated", FrameworkGlobals.ApplicationLanguage));
                 _view.UnlockView();
             }
             else
@@ -161,7 +161,7 @@ namespace pdfReducerCloud.Controller
             if (!_appInfo.AutoRun && (!ConfigurationManager.SaveConfiguration(PdfReducerGlobals.GetApplicationConfigurationFilePath(), FrameworkGlobals.ApplicationConfiguration) ||
                 !ConfigurationManager.SaveConfiguration(PdfReducerGlobals.GetReduceActionConfigurationFilePath(), PdfReducerGlobals.ReduceActionConfiguration)))
             {
-                MessageBox.Show(FrameworkGlobals.MessagesLocalizer.GetString("saveConfigurationFailure", FrameworkGlobals.ApplicationLanguage), FrameworkGlobals.MessagesLocalizer.GetString("saveConfigurationFailureTitle", FrameworkGlobals.ApplicationLanguage), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                DialogUtilities.ShowErrorMessage(FrameworkGlobals.MessagesLocalizer.GetString("saveConfigurationFailure", FrameworkGlobals.ApplicationLanguage), FrameworkGlobals.MessagesLocalizer.GetString("saveConfigurationFailureTitle", FrameworkGlobals.ApplicationLanguage));
             }
         }
 

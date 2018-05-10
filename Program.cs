@@ -30,6 +30,7 @@ using PassportPDF.Tools.Framework.Configuration;
 using PassportPDF.Tools.WinForm;
 using PassportPDF.Tools.WinForm.Views;
 using PassportPDF.Tools.WinForm.Controllers;
+using PassportPDF.Tools.WinForm.Utilities;
 using pdfReducerCloud.Views;
 using pdfReducerCloud.Utilities;
 using pdfReducerCloud.Controller;
@@ -74,7 +75,7 @@ namespace pdfReducerCloud
 
                 if (!owned)
                 {
-                    MessageBox.Show(FrameworkGlobals.MessagesLocalizer.GetString("programInstanceAlreadyRunning", FrameworkGlobals.ApplicationLanguage), FrameworkGlobals.MessagesLocalizer.GetString("caption_stop", FrameworkGlobals.ApplicationLanguage), MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    DialogUtilities.ShowErrorMessage(FrameworkGlobals.MessagesLocalizer.GetString("programInstanceAlreadyRunning", FrameworkGlobals.ApplicationLanguage), FrameworkGlobals.MessagesLocalizer.GetString("caption_stop", FrameworkGlobals.ApplicationLanguage));
                     System.Diagnostics.Process.GetCurrentProcess().Kill();
                 }
             }

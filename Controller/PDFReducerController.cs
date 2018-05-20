@@ -135,7 +135,7 @@ namespace pdfReducerCloud.Controller
         {
             base.OnOperationsCompletion();
 
-            string elapsedTime = ParsingUtils.GetElapsedTimeString(_stopwatch.Elapsed.Hours, _stopwatch.Elapsed.Minutes, _stopwatch.Elapsed.Seconds, _stopwatch.Elapsed.Milliseconds / 10);
+            string elapsedTime = ParsingUtils.GetElapsedTimeString(_stopwatch.Elapsed);
 
             _view.NotifyOperationsResult(LogMessagesUtils.GetReductionWorkCompletionText(_operationsStats.ProcessedFileCount, _operationsStats.SuccesfullyProcessedFileCount, _operationsStats.UnsuccesfullyProcessedFileCount, _operationsStats.TotalInputSize, _operationsStats.TotalOutputSize, elapsedTime));
 

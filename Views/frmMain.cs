@@ -17,28 +17,8 @@
  **********************************************************************/
 
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Diagnostics;
-using System.Drawing;
-using System.Globalization;
-using System.IO;
-using System.Net;
-using System.Text;
-using System.Threading;
-using System.Windows.Forms;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Reflection;
-using PassportPDF.Model;
 using PassportPDF.Tools.Framework;
-using PassportPDF.Tools.Framework.Configuration;
-using PassportPDF.Tools.Framework.Utilities;
-using PassportPDF.Tools.Framework.Models;
 using PassportPDF.Tools.WinForm.Views;
-using pdfReducerCloud.Controller;
-using pdfReducerCloud.Utilities;
-using pdfReducerCloud.Models;
 
 namespace pdfReducerCloud.Views
 {
@@ -48,7 +28,7 @@ namespace pdfReducerCloud.Views
 
         private readonly UpdateRatioDelegate _reductionRatioUpdateEventHandler;
 
-        public frmMain() : base()
+        public frmMain()
         {
             _reductionRatioUpdateEventHandler = UpdateReductionRatio;
             InitializeComponent();

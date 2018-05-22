@@ -1,4 +1,3 @@
-using System;
 using System.Reflection;
 using System.Runtime.InteropServices;
 
@@ -8,11 +7,6 @@ using System.Runtime.InteropServices;
 
 //  Review the values of the assembly attributes
 
-using System.Collections;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Diagnostics;
-using System.Windows.Forms;
 [assembly: AssemblyTitle("ORPALIS PDF Reducer Cloud")]
 [assembly: AssemblyDescription("The ultimate PDF reducer toolkit")]
 [assembly: AssemblyCompany("ORPALIS")]

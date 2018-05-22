@@ -17,22 +17,15 @@
  **********************************************************************/
 
 using System;
-using System.Globalization;
-using System.IO;
 using System.Threading;
 using System.Windows.Forms;
 using System.Net;
-using System.Reflection;
-using PassportPDF.Model;
 using PassportPDF.Tools.Framework;
-using PassportPDF.Tools.Framework.Utilities;
 using PassportPDF.Tools.Framework.Configuration;
-using PassportPDF.Tools.WinForm;
 using PassportPDF.Tools.WinForm.Views;
 using PassportPDF.Tools.WinForm.Controllers;
 using PassportPDF.Tools.WinForm.Utilities;
 using pdfReducerCloud.Views;
-using pdfReducerCloud.Utilities;
 using pdfReducerCloud.Controller;
 
 namespace pdfReducerCloud

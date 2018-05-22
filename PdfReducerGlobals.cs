@@ -30,21 +30,9 @@ namespace pdfReducerCloud
         public const string PASSPORT_PDF_APP_ID = "2ED8750B-AE6D-47B7-98CA-CB0A413BD24B";
         public const string SOURCE_CODE_URL = "https://github.com/Orpalis/pdfreducercloud";
 
-        public static ReduceActionConfiguration ReduceActionConfiguration = new ReduceActionConfiguration();
-
         public static readonly OrpalisLocalizer LabelsLocalizer = new OrpalisLocalizer(AssemblyUtilities.GetManifestResourceStream("res.labels.json"));
 
-
-        public static string GetLegalProductName(bool includeVersion)
-        {
-            string productName = PRODUCT_NAME;
-            if (includeVersion)
-            {
-                productName += " " + AssemblyUtilities.GetVersionString();
-            }
-
-            return productName;
-        }
+        public static ReduceActionConfiguration ReduceActionConfiguration = new ReduceActionConfiguration();
 
 
         public static string GetApplicationConfigurationFilePath()

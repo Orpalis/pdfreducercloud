@@ -36,7 +36,7 @@ namespace pdfReducerCloud.Utilities
         {
             Assembly assembly = Assembly.GetExecutingAssembly();
             FileVersionInfo fvi = FileVersionInfo.GetVersionInfo(assembly.Location);
-            return GetMajorVersion() + "." + fvi.FileMinorPart.ToString() + "." + fvi.FilePrivatePart.ToString();
+            return GetMajorVersion() + "." + fvi.FileMinorPart + "." + fvi.FilePrivatePart;
         }
 
 

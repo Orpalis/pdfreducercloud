@@ -17,13 +17,8 @@
  **********************************************************************/
 
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
 using System.Reflection;
-using System.Windows.Forms;
 using System.Drawing;
-using PassportPDF.Model;
 using PassportPDF.Tools.Framework;
 using PassportPDF.Tools.Framework.Models;
 using PassportPDF.Tools.Framework.Utilities;
@@ -33,7 +28,6 @@ using PassportPDF.Tools.WinForm.Controllers;
 using PassportPDF.Tools.WinForm.Models;
 using PassportPDF.Tools.WinForm.Utilities;
 using pdfReducerCloud.Utilities;
-using pdfReducerCloud.Models;
 using pdfReducerCloud.Views;
 
 namespace pdfReducerCloud.Controller
@@ -125,12 +119,6 @@ namespace pdfReducerCloud.Controller
         }
 
 
-        protected override void OnWorkerWorkCompletion(int workerNumber)
-        {
-            base.OnWorkerWorkCompletion(workerNumber);
-        }
-
-
         protected override void OnOperationsCompletion()
         {
             base.OnOperationsCompletion();
@@ -166,9 +154,9 @@ namespace pdfReducerCloud.Controller
         }
 
 
-        private void UpdateReductionStats(float inputSize, float outputSize, bool convertedToPDF)
+        private void UpdateReductionStats(float inputSize, float outputSize, bool convertedToPdf)
         {
-            if (!convertedToPDF)
+            if (!convertedToPdf)
             {
                 _operationsStats.TotalInputSize += inputSize;
                 _operationsStats.TotalOutputSize += outputSize;

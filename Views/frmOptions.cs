@@ -17,7 +17,6 @@
  **********************************************************************/
 
 using System;
-using System.Windows.Forms;
 using PassportPDF.Model;
 using PassportPDF.Tools.Framework;
 using PassportPDF.Tools.Framework.Configuration;
@@ -66,17 +65,21 @@ namespace pdfReducerCloud.Views
             tabContentRemoval.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_tabContentRemoval", FrameworkGlobals.ApplicationLanguage);
             tabOutputFormat.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_tabOutputFormat", FrameworkGlobals.ApplicationLanguage);
             tabCompression.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_tabCompression", FrameworkGlobals.ApplicationLanguage);
-            this.cmbImageQuality.Items.AddRange(new object[] {
-            PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbImageQuality.Items", FrameworkGlobals.ApplicationLanguage),
-            PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbImageQuality.Items1", FrameworkGlobals.ApplicationLanguage),
-            PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbImageQuality.Items2", FrameworkGlobals.ApplicationLanguage),
-            PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbImageQuality.Items3", FrameworkGlobals.ApplicationLanguage)});
-            this.cmbPreferredVersion.Items.AddRange(new object[] {
-            PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbPreferredVersion.Items", FrameworkGlobals.ApplicationLanguage),
-            PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbPreferredVersion.Items1", FrameworkGlobals.ApplicationLanguage),
-            PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbPreferredVersion.Items2", FrameworkGlobals.ApplicationLanguage),
-            PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbPreferredVersion.Items3", FrameworkGlobals.ApplicationLanguage),
-            PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbPreferredVersion.Items4", FrameworkGlobals.ApplicationLanguage)});
+            cmbImageQuality.Items.AddRange(new object[]
+            {
+                PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbImageQuality.Items", FrameworkGlobals.ApplicationLanguage),
+                PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbImageQuality.Items1", FrameworkGlobals.ApplicationLanguage),
+                PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbImageQuality.Items2", FrameworkGlobals.ApplicationLanguage),
+                PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbImageQuality.Items3", FrameworkGlobals.ApplicationLanguage)
+            });
+            cmbPreferredVersion.Items.AddRange(new object[]
+            {
+                PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbPreferredVersion.Items", FrameworkGlobals.ApplicationLanguage),
+                PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbPreferredVersion.Items1", FrameworkGlobals.ApplicationLanguage),
+                PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbPreferredVersion.Items2", FrameworkGlobals.ApplicationLanguage),
+                PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbPreferredVersion.Items3", FrameworkGlobals.ApplicationLanguage),
+                PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbPreferredVersion.Items4", FrameworkGlobals.ApplicationLanguage)
+            });
             toolTipPreferredVersion.SetToolTip(cmbPreferredVersion, PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbPreferredVersion.ToolTip", FrameworkGlobals.ApplicationLanguage));
             toolTipPreferredVersion.ToolTipTitle = PdfReducerGlobals.LabelsLocalizer.GetString("label_tooltipPreferredVersionTitle", FrameworkGlobals.ApplicationLanguage);
         }

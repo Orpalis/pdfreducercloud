@@ -103,29 +103,9 @@ namespace pdfReducerCloud.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap facebook {
-            get {
-                object obj = ResourceManager.GetObject("facebook", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap pdf_reducer_cloud_final_logo {
             get {
                 object obj = ResourceManager.GetObject("pdf_reducer_cloud_final_logo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap twitter {
-            get {
-                object obj = ResourceManager.GetObject("twitter", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -148,10 +148,6 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\app.manifest" />
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Views\frmMain.cs">
@@ -174,11 +170,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Utilities\AssemblyUtilities.cs" />
     <Compile Include="Views\IPDFReducerCloudMainView.cs" />
@@ -209,11 +200,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
-    <None Include="res\facebook.png" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="res\labels.json" />
-    <None Include="res\twitter.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="res\pdfreducercloud_icon.ico" />

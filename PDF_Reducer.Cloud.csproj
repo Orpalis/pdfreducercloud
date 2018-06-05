@@ -95,30 +95,31 @@
     <Reference Include="JsonSubTypes, Version=1.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\JsonSubTypes.1.4.0\lib\net46\JsonSubTypes.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Win32.Registry, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.Win32.Registry.4.4.0\lib\net461\Microsoft.Win32.Registry.dll</HintPath>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Win32.Registry, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Win32.Registry.4.5.0\lib\net461\Microsoft.Win32.Registry.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Orpalis.Globals.Localization, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\Orpalis.Globals.Localization.1.0.1\lib\netstandard1.3\Orpalis.Globals.Localization.dll</HintPath>
+    <Reference Include="Orpalis.Globals.Localization, Version=1.0.0.2, Culture=neutral, PublicKeyToken=47f7b74dc969121f, processorArchitecture=MSIL">
+      <HintPath>packages\Orpalis.Globals.Localization.1.0.2\lib\netstandard2.0\Orpalis.Globals.Localization.dll</HintPath>
     </Reference>
-    <Reference Include="PassportPDF, Version=1.0.24.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\PassportPDF.1.0.24\lib\net461\PassportPDF.dll</HintPath>
+    <Reference Include="PassportPDF, Version=1.0.26.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\PassportPDF.1.0.26\lib\net461\PassportPDF.dll</HintPath>
     </Reference>
-    <Reference Include="PassportPDF.Tools.Framework, Version=1.0.15.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\PassportPDF.Tools.Framework.1.0.15\lib\netstandard2.0\PassportPDF.Tools.Framework.dll</HintPath>
+    <Reference Include="PassportPDF.Tools.Framework, Version=1.0.17.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\PassportPDF.Tools.Framework.1.0.17\lib\netstandard2.0\PassportPDF.Tools.Framework.dll</HintPath>
     </Reference>
-    <Reference Include="PassportPDF.Tools.WinForm, Version=1.0.16.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>packages\PassportPDF.Tools.WinForm.1.0.16\lib\net461\PassportPDF.Tools.WinForm.dll</HintPath>
+    <Reference Include="PassportPDF.Tools.WinForm, Version=1.0.18.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\PassportPDF.Tools.WinForm.1.0.18\lib\net461\PassportPDF.Tools.WinForm.dll</HintPath>
     </Reference>
-    <Reference Include="RestSharp, Version=106.2.2.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
-      <HintPath>packages\RestSharp.106.2.2\lib\net452\RestSharp.dll</HintPath>
+    <Reference Include="RestSharp, Version=106.3.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>packages\RestSharp.106.3.0\lib\net452\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.2.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.4.5.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.IO.Compression, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -128,15 +129,18 @@
     <Reference Include="System.Net.Sockets, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Net.Sockets.4.3.0\lib\net46\System.Net.Sockets.dll</HintPath>
     </Reference>
-    <Reference Include="System.Security.AccessControl, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\System.Security.AccessControl.4.4.1\lib\net461\System.Security.AccessControl.dll</HintPath>
+    <Reference Include="System.Security.AccessControl, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.AccessControl.4.5.0\lib\net461\System.Security.AccessControl.dll</HintPath>
     </Reference>
     <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Security.Principal.Windows, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>packages\System.Security.Principal.Windows.4.4.1\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    <Reference Include="System.Security.Principal.Windows, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Security.Principal.Windows.4.5.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
     </Reference>
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>

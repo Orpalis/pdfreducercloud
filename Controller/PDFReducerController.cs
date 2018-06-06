@@ -39,7 +39,7 @@ namespace pdfReducerCloud.Controller
                 PdfReducerGlobals.PRODUCT_NAME, PdfReducerGlobals.PASSPORT_PDF_APP_ID,
                 PdfReducerGlobals.APP_EXECUTABLE_NAME, PdfReducerGlobals.SOURCE_CODE_URL,
                 AssemblyUtilities.GetVersion(), Icon.ExtractAssociatedIcon(Assembly.GetExecutingAssembly().Location),
-                Properties.Resources.pdf_reducer_cloud_final_logo, PdfReducerGlobals.GetApplicationConfigurationFilePath(), autoRun, args))
+                Properties.Resources.pdf_reducer_cloud_final_logo, PdfReducerGlobals.INPUT_FILE_TYPE, PdfReducerGlobals.GetApplicationConfigurationFilePath(), autoRun, args))
         { }
 
 

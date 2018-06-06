@@ -19,6 +19,7 @@
 using System;
 using Orpalis.Globals.Localization;
 using PassportPDF.Tools.Framework.Configuration;
+using PassportPDF.Tools.WinForm.Models;
 using pdfReducerCloud.Utilities;
 
 namespace pdfReducerCloud
@@ -29,10 +30,11 @@ namespace pdfReducerCloud
         public const string APP_EXECUTABLE_NAME = "pdfReducerCloud.exe";
         public const string PASSPORT_PDF_APP_ID = "2ED8750B-AE6D-47B7-98CA-CB0A413BD24B";
         public const string SOURCE_CODE_URL = "https://github.com/Orpalis/pdfreducercloud";
+        public const PassportPDFDesktopAppInformation.AcceptedInputFilesType INPUT_FILE_TYPE = PassportPDFDesktopAppInformation.AcceptedInputFilesType.Document;
 
         public static readonly OrpalisLocalizer LabelsLocalizer = new OrpalisLocalizer(AssemblyUtilities.GetManifestResourceStream("res.labels.json"));
 
-        public static ReduceActionConfiguration ReduceActionConfiguration = new ReduceActionConfiguration();
+        public static PDFReduceActionConfiguration ReduceActionConfiguration = new PDFReduceActionConfiguration();
 
 
         public static string GetApplicationConfigurationFilePath()

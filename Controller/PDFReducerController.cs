@@ -71,17 +71,17 @@ namespace pdfReducerCloud.Controller
             {
                 try
                 {
-                    PdfReducerGlobals.ReduceActionConfiguration = (ReduceActionConfiguration)ConfigurationManager.InitializeConfigurationInstanceEx(PdfReducerGlobals.GetReduceActionConfigurationFilePath(), typeof(ReduceActionConfiguration));
+                    PdfReducerGlobals.ReduceActionConfiguration = (PDFReduceActionConfiguration)ConfigurationManager.InitializeConfigurationInstanceEx(PdfReducerGlobals.GetReduceActionConfigurationFilePath(), typeof(PDFReduceActionConfiguration));
                 }
                 catch (Exception)
                 {
                     DialogUtilities.ShowErrorMessage(FrameworkGlobals.MessagesLocalizer.GetString("readReduceConfigurationFailure", FrameworkGlobals.ApplicationLanguage), FrameworkGlobals.MessagesLocalizer.GetString("readConfigurationFailureTitle", FrameworkGlobals.ApplicationLanguage));
-                    PdfReducerGlobals.ReduceActionConfiguration = ConfigurationManager.ResetDefaultReduceActionConfiguration();
+                    PdfReducerGlobals.ReduceActionConfiguration = ConfigurationManager.ResetDefaultPDFReduceActionConfiguration();
                 }
             }
             else
             {
-                PdfReducerGlobals.ReduceActionConfiguration = ConfigurationManager.ResetDefaultReduceActionConfiguration();
+                PdfReducerGlobals.ReduceActionConfiguration = ConfigurationManager.ResetDefaultPDFReduceActionConfiguration();
                 CommandLineParsingUtilities.ParseCommandLineArgs(_appInfo.CommandLineArguments, FrameworkGlobals.ApplicationConfiguration, PdfReducerGlobals.ReduceActionConfiguration);
 
                 if (FrameworkGlobals.ApplicationConfiguration.MinimizedWindow)

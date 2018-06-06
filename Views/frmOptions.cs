@@ -224,7 +224,7 @@ namespace pdfReducerCloud.Views
         protected override void ResetDefaultConfiguration()
         {
             base.ResetDefaultConfiguration();
-            PdfReducerGlobals.ReduceActionConfiguration = ConfigurationManager.ResetDefaultReduceActionConfiguration();
+            PdfReducerGlobals.ReduceActionConfiguration = ConfigurationManager.ResetDefaultPDFReduceActionConfiguration();
             LoadConfiguration();
         }
 

@@ -73,7 +73,7 @@ namespace pdfReducerCloud.Controller
                 {
                     PdfReducerGlobals.ReduceActionConfiguration = (PDFReduceActionConfiguration)ConfigurationManager.InitializeConfigurationInstanceEx(PdfReducerGlobals.GetReduceActionConfigurationFilePath(), typeof(PDFReduceActionConfiguration));
                 }
-                catch (Exception)
+                catch
                 {
                     DialogUtilities.ShowErrorMessage(FrameworkGlobals.MessagesLocalizer.GetString("readReduceConfigurationFailure", FrameworkGlobals.ApplicationLanguage), FrameworkGlobals.MessagesLocalizer.GetString("readConfigurationFailureTitle", FrameworkGlobals.ApplicationLanguage));
                     PdfReducerGlobals.ReduceActionConfiguration = ConfigurationManager.ResetDefaultPDFReduceActionConfiguration();
@@ -107,6 +107,7 @@ namespace pdfReducerCloud.Controller
             }
 
             _view.NotifyOperationCompletion(operationsCompletionMessage);
+
             if (!string.IsNullOrEmpty(FrameworkGlobals.ApplicationConfiguration.LogsPath) && FrameworkGlobals.ApplicationConfiguration.ExportLogs)
             {
                 FrameworkGlobals.LogsManager.LogMessage(operationsCompletionMessage);

@@ -75,7 +75,7 @@ namespace pdfReducerCloud.Controller
                 }
                 catch
                 {
-                    DialogUtilities.ShowErrorMessage(FrameworkGlobals.MessagesLocalizer.GetString("readReduceConfigurationFailure", FrameworkGlobals.ApplicationLanguage), FrameworkGlobals.MessagesLocalizer.GetString("readConfigurationFailureTitle", FrameworkGlobals.ApplicationLanguage));
+                    _view.ShowErrorMessage(FrameworkGlobals.MessagesLocalizer.GetString("readReduceConfigurationFailure", FrameworkGlobals.ApplicationLanguage), FrameworkGlobals.MessagesLocalizer.GetString("readConfigurationFailureTitle", FrameworkGlobals.ApplicationLanguage));
                     PdfReducerGlobals.ReduceActionConfiguration = ConfigurationManager.ResetDefaultPDFReduceActionConfiguration();
                 }
             }
@@ -132,7 +132,7 @@ namespace pdfReducerCloud.Controller
 
             if (!_appInfo.AutoRun)
             {
-                DialogUtilities.ShowInformationMessage(detailedWorkCompletionMessage, FrameworkGlobals.MessagesLocalizer.GetString("processTerminated", FrameworkGlobals.ApplicationLanguage));
+                _view.ShowInformationMessage(detailedWorkCompletionMessage, FrameworkGlobals.MessagesLocalizer.GetString("processTerminated", FrameworkGlobals.ApplicationLanguage));
                 _view.UnlockView();
             }
             else
@@ -150,7 +150,7 @@ namespace pdfReducerCloud.Controller
             if (!_appInfo.AutoRun && (!ConfigurationManager.SaveConfiguration(PdfReducerGlobals.GetApplicationConfigurationFilePath(), FrameworkGlobals.ApplicationConfiguration) ||
                 !ConfigurationManager.SaveConfiguration(PdfReducerGlobals.GetReduceActionConfigurationFilePath(), PdfReducerGlobals.ReduceActionConfiguration)))
             {
-                DialogUtilities.ShowErrorMessage(FrameworkGlobals.MessagesLocalizer.GetString("saveConfigurationFailure", FrameworkGlobals.ApplicationLanguage), FrameworkGlobals.MessagesLocalizer.GetString("saveConfigurationFailureTitle", FrameworkGlobals.ApplicationLanguage));
+                _view.ShowErrorMessage(FrameworkGlobals.MessagesLocalizer.GetString("saveConfigurationFailure", FrameworkGlobals.ApplicationLanguage), FrameworkGlobals.MessagesLocalizer.GetString("saveConfigurationFailureTitle", FrameworkGlobals.ApplicationLanguage));
             }
         }
 

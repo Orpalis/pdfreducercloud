@@ -54,6 +54,7 @@ namespace pdfReducerCloud.Views
             chkRemoveBlankPages.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_chkRemoveBlankPages", FrameworkGlobals.ApplicationLanguage);
             chkRemoveJavaScript.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_chkRemoveJavaScript", FrameworkGlobals.ApplicationLanguage);
             chkUseMRC.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_chkUseMRC", FrameworkGlobals.ApplicationLanguage);
+            chkPreserveSmoothing.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_chkPreserveSmoothing", FrameworkGlobals.ApplicationLanguage);
             chkPackFonts.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_chkPackFonts", FrameworkGlobals.ApplicationLanguage);
             lbDocumentContent.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_lbDocumentContent", FrameworkGlobals.ApplicationLanguage);
             lbInteractiveContent.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_lbInteractiveContent", FrameworkGlobals.ApplicationLanguage);
@@ -93,6 +94,7 @@ namespace pdfReducerCloud.Views
             chkOnlyPdf.Checked = FrameworkGlobals.ApplicationConfiguration.OnlyProcessPDF;
 
             chkEnableColorDetection.Checked = PdfReducerGlobals.ReduceActionConfiguration.EnableColorDetection;
+            chkCharRepair.Checked = PdfReducerGlobals.ReduceActionConfiguration.EnableCharRepair;
             chkRecompressImages.Checked = PdfReducerGlobals.ReduceActionConfiguration.RecompressImages;
             chkPackDocument.Checked = PdfReducerGlobals.ReduceActionConfiguration.PackDocument;
             chkDownscaleImages.Checked = PdfReducerGlobals.ReduceActionConfiguration.DownscaleImages;
@@ -108,12 +110,9 @@ namespace pdfReducerCloud.Views
             chkJPEG2000.Checked = PdfReducerGlobals.ReduceActionConfiguration.EnableJPEG2000;
             chkJBIG2.Checked = PdfReducerGlobals.ReduceActionConfiguration.EnableJBIG2;
             chkUseMRC.Checked = PdfReducerGlobals.ReduceActionConfiguration.EnableMRC;
+            chkPreserveSmoothing.Checked = PdfReducerGlobals.ReduceActionConfiguration.MRCPreserveSmoothing;
             chkKeepWriteAcessTime.Checked = FrameworkGlobals.ApplicationConfiguration.FileProductionRules.KeepWriteAndAccessTime;
             chkPackFonts.Checked = PdfReducerGlobals.ReduceActionConfiguration.PackFonts;
-
-            // Check whether mutually exclusive options should be disabled
-            chkCharRepair.Enabled = PdfReducerGlobals.ReduceActionConfiguration.EnableColorDetection;
-            chkCharRepair.Checked = chkCharRepair.Enabled && PdfReducerGlobals.ReduceActionConfiguration.EnableCharRepair;
 
             switch (PdfReducerGlobals.ReduceActionConfiguration.OutputVersion)
             {
@@ -153,7 +152,14 @@ namespace pdfReducerCloud.Views
                     cmbImageQuality.SelectedIndex = 3;
                     break;
             }
+
+            // Check whether mutually exclusive options should be disabled
+            chkCharRepair.Enabled = PdfReducerGlobals.ReduceActionConfiguration.EnableColorDetection;
+            chkPreserveSmoothing.Enabled = PdfReducerGlobals.ReduceActionConfiguration.EnableMRC;
+            nuDownscaleResolution.Enabled = PdfReducerGlobals.ReduceActionConfiguration.DownscaleImages;
+            cmbImageQuality.Enabled = PdfReducerGlobals.ReduceActionConfiguration.RecompressImages;
         }
+
 
         protected override void ApplyConfigurationChanges()
         {
@@ -179,6 +185,7 @@ namespace pdfReducerCloud.Views
             PdfReducerGlobals.ReduceActionConfiguration.EnableJPEG2000 = chkJPEG2000.Checked;
             PdfReducerGlobals.ReduceActionConfiguration.EnableJBIG2 = chkJBIG2.Checked;
             PdfReducerGlobals.ReduceActionConfiguration.EnableMRC = chkUseMRC.Checked;
+            PdfReducerGlobals.ReduceActionConfiguration.MRCPreserveSmoothing = chkPreserveSmoothing.Checked;
             PdfReducerGlobals.ReduceActionConfiguration.EnableCharRepair = chkCharRepair.Checked;
             PdfReducerGlobals.ReduceActionConfiguration.PackFonts = chkPackFonts.Checked;
 
@@ -221,6 +228,7 @@ namespace pdfReducerCloud.Views
             Dispose();
         }
 
+
         protected override void ResetDefaultConfiguration()
         {
             base.ResetDefaultConfiguration();
@@ -231,17 +239,25 @@ namespace pdfReducerCloud.Views
 
         private void chkEnableColorDetection_CheckedChanged(object sender, EventArgs e)
         {
-            if (!chkEnableColorDetection.Checked)
-            {
-                // Don't allow character repairing when no color detection is performed
-                chkCharRepair.Checked = false;
-                chkCharRepair.Enabled = false;
-            }
-            else
-            {
-                // Re-enable char character repairing
-                chkCharRepair.Enabled = true;
-            }
+            chkCharRepair.Enabled = chkEnableColorDetection.Checked;
+        }
+
+
+        private void chkUseMRC_CheckedChanged(object sender, EventArgs e)
+        {
+            chkPreserveSmoothing.Enabled = chkUseMRC.Checked;
+        }
+
+
+        private void chkDownscaleImages_CheckedChanged(object sender, EventArgs e)
+        {
+            nuDownscaleResolution.Enabled = chkDownscaleImages.Checked;
+        }
+
+
+        private void chkRecompressImages_CheckedChanged(object sender, EventArgs e)
+        {
+            cmbImageQuality.Enabled = chkRecompressImages.Checked;
         }
     }
 }

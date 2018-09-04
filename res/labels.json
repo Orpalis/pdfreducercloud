@@ -334,5 +334,13 @@
       "fr": "Version préférée",
       "en": "Preferred version"
     }
+  },
+  {
+    "Name": "label_chkPreserveSmoothing",
+    "ResourceIDs": "*",
+    "LocalizedValue": {
+      "fr": "Préserver l'adoucissement des contours",
+      "en": "Preserve smoothing"
+    }
   }
 ]

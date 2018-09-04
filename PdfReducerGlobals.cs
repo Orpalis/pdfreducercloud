@@ -27,7 +27,6 @@ namespace pdfReducerCloud
     internal static class PdfReducerGlobals
     {
         public const string PRODUCT_NAME = "PassportPDF PDF Reducer Cloud";
-        public const string APP_EXECUTABLE_NAME = "pdfReducerCloud.exe";
         public const string PASSPORT_PDF_APP_ID = "2ED8750B-AE6D-47B7-98CA-CB0A413BD24B";
         public const string SOURCE_CODE_URL = "https://github.com/Orpalis/pdfreducercloud";
         public const PassportPDFDesktopAppInformation.AcceptedInputFilesType INPUT_FILE_TYPE = PassportPDFDesktopAppInformation.AcceptedInputFilesType.Document;

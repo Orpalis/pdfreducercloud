@@ -33,6 +33,7 @@
             this.chkDeleteOriginalFileOnSuccess = new System.Windows.Forms.CheckBox();
             this.chkEnableColorDetection = new System.Windows.Forms.CheckBox();
             this.tabCompression = new System.Windows.Forms.TabPage();
+            this.chkPreserveSmoothing = new System.Windows.Forms.CheckBox();
             this.chkPackFonts = new System.Windows.Forms.CheckBox();
             this.chkUseMRC = new System.Windows.Forms.CheckBox();
             this.chkCharRepair = new System.Windows.Forms.CheckBox();
@@ -48,6 +49,7 @@
             this.lbResolution = new System.Windows.Forms.Label();
             this.lbQuality = new System.Windows.Forms.Label();
             this.tabContentRemoval = new System.Windows.Forms.TabPage();
+            this.chkRemoveJavaScript = new System.Windows.Forms.CheckBox();
             this.chkRemoveBlankPages = new System.Windows.Forms.CheckBox();
             this.chkRemoveHyperlinks = new System.Windows.Forms.CheckBox();
             this.chkPackDocument = new System.Windows.Forms.CheckBox();
@@ -65,7 +67,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolTipPreferredVersion = new System.Windows.Forms.ToolTip(this.components);
-            this.chkRemoveJavaScript = new System.Windows.Forms.CheckBox();
             this.tabGeneral.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabCompression.SuspendLayout();
@@ -130,6 +131,7 @@
             // 
             // tabCompression
             // 
+            this.tabCompression.Controls.Add(this.chkPreserveSmoothing);
             this.tabCompression.Controls.Add(this.chkPackFonts);
             this.tabCompression.Controls.Add(this.chkUseMRC);
             this.tabCompression.Controls.Add(this.chkCharRepair);
@@ -142,10 +144,21 @@
             this.tabCompression.Text = "Compression";
             this.tabCompression.UseVisualStyleBackColor = true;
             // 
+            // chkPreserveSmoothing
+            // 
+            this.chkPreserveSmoothing.AutoSize = true;
+            this.chkPreserveSmoothing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.chkPreserveSmoothing.Location = new System.Drawing.Point(15, 107);
+            this.chkPreserveSmoothing.Name = "chkPreserveSmoothing";
+            this.chkPreserveSmoothing.Size = new System.Drawing.Size(119, 17);
+            this.chkPreserveSmoothing.TabIndex = 18;
+            this.chkPreserveSmoothing.Text = "Preserve smoothing";
+            this.chkPreserveSmoothing.UseVisualStyleBackColor = true;
+            // 
             // chkPackFonts
             // 
             this.chkPackFonts.AutoSize = true;
-            this.chkPackFonts.Location = new System.Drawing.Point(15, 85);
+            this.chkPackFonts.Location = new System.Drawing.Point(15, 61);
             this.chkPackFonts.Name = "chkPackFonts";
             this.chkPackFonts.Size = new System.Drawing.Size(77, 17);
             this.chkPackFonts.TabIndex = 17;
@@ -156,12 +169,13 @@
             // 
             this.chkUseMRC.AutoSize = true;
             this.chkUseMRC.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.chkUseMRC.Location = new System.Drawing.Point(15, 61);
+            this.chkUseMRC.Location = new System.Drawing.Point(15, 84);
             this.chkUseMRC.Name = "chkUseMRC";
             this.chkUseMRC.Size = new System.Drawing.Size(253, 17);
             this.chkUseMRC.TabIndex = 16;
             this.chkUseMRC.Text = "Enable MRC (Mixed raster content) compression";
             this.chkUseMRC.UseVisualStyleBackColor = true;
+            this.chkUseMRC.CheckedChanged += new System.EventHandler(this.chkUseMRC_CheckedChanged);
             // 
             // chkCharRepair
             // 
@@ -223,6 +237,7 @@
             this.chkRecompressImages.TabIndex = 8;
             this.chkRecompressImages.Text = "Recompress images";
             this.chkRecompressImages.UseVisualStyleBackColor = true;
+            this.chkRecompressImages.CheckedChanged += new System.EventHandler(this.chkRecompressImages_CheckedChanged);
             // 
             // chkDownscaleImages
             // 
@@ -234,6 +249,7 @@
             this.chkDownscaleImages.TabIndex = 7;
             this.chkDownscaleImages.Text = "Downscale images";
             this.chkDownscaleImages.UseVisualStyleBackColor = true;
+            this.chkDownscaleImages.CheckedChanged += new System.EventHandler(this.chkDownscaleImages_CheckedChanged);
             // 
             // chkJPEG2000
             // 
@@ -319,6 +335,17 @@
             this.tabContentRemoval.TabIndex = 4;
             this.tabContentRemoval.Text = "Content Removal";
             this.tabContentRemoval.UseVisualStyleBackColor = true;
+            // 
+            // chkRemoveJavaScript
+            // 
+            this.chkRemoveJavaScript.AutoSize = true;
+            this.chkRemoveJavaScript.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.chkRemoveJavaScript.Location = new System.Drawing.Point(276, 104);
+            this.chkRemoveJavaScript.Name = "chkRemoveJavaScript";
+            this.chkRemoveJavaScript.Size = new System.Drawing.Size(119, 17);
+            this.chkRemoveJavaScript.TabIndex = 13;
+            this.chkRemoveJavaScript.Text = "Remove JavaScript";
+            this.chkRemoveJavaScript.UseVisualStyleBackColor = true;
             // 
             // chkRemoveBlankPages
             // 
@@ -487,17 +514,6 @@
             // 
             this.toolTipPreferredVersion.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
-            // chkRemoveJavaScript
-            // 
-            this.chkRemoveJavaScript.AutoSize = true;
-            this.chkRemoveJavaScript.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.chkRemoveJavaScript.Location = new System.Drawing.Point(276, 104);
-            this.chkRemoveJavaScript.Name = "chkRemoveJavaScript";
-            this.chkRemoveJavaScript.Size = new System.Drawing.Size(119, 17);
-            this.chkRemoveJavaScript.TabIndex = 13;
-            this.chkRemoveJavaScript.Text = "Remove JavaScript";
-            this.chkRemoveJavaScript.UseVisualStyleBackColor = true;
-            // 
             // frmOptions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -566,5 +582,6 @@
         private System.Windows.Forms.CheckBox chkJBIG2;
         private System.Windows.Forms.CheckBox chkRemoveBlankPages;
         private System.Windows.Forms.CheckBox chkRemoveJavaScript;
+        private System.Windows.Forms.CheckBox chkPreserveSmoothing;
     }
 }

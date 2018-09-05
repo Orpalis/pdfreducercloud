@@ -62,6 +62,8 @@ namespace pdfReducerCloud.Views
             lbDpi.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_lbDpi", FrameworkGlobals.ApplicationLanguage);
             lbQuality.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_lbQuality", FrameworkGlobals.ApplicationLanguage);
             lbResolution.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_lbResolution", FrameworkGlobals.ApplicationLanguage);
+            lbMrc.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_lbMrc", FrameworkGlobals.ApplicationLanguage);
+            lbColorDetection.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_lbColorDetection", FrameworkGlobals.ApplicationLanguage);
             tabBitmap.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_tabBitmap", FrameworkGlobals.ApplicationLanguage);
             tabContentRemoval.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_tabContentRemoval", FrameworkGlobals.ApplicationLanguage);
             tabOutputFormat.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_tabOutputFormat", FrameworkGlobals.ApplicationLanguage);

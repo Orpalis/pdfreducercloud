@@ -33,6 +33,7 @@
             this.chkDeleteOriginalFileOnSuccess = new System.Windows.Forms.CheckBox();
             this.chkEnableColorDetection = new System.Windows.Forms.CheckBox();
             this.tabCompression = new System.Windows.Forms.TabPage();
+            this.lbMrc = new System.Windows.Forms.Label();
             this.chkPreserveSmoothing = new System.Windows.Forms.CheckBox();
             this.chkPackFonts = new System.Windows.Forms.CheckBox();
             this.chkUseMRC = new System.Windows.Forms.CheckBox();
@@ -67,6 +68,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolTipPreferredVersion = new System.Windows.Forms.ToolTip(this.components);
+            this.lbColorDetection = new System.Windows.Forms.Label();
             this.tabGeneral.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabCompression.SuspendLayout();
@@ -121,7 +123,7 @@
             // chkEnableColorDetection
             // 
             this.chkEnableColorDetection.AutoSize = true;
-            this.chkEnableColorDetection.Location = new System.Drawing.Point(15, 15);
+            this.chkEnableColorDetection.Location = new System.Drawing.Point(15, 59);
             this.chkEnableColorDetection.Name = "chkEnableColorDetection";
             this.chkEnableColorDetection.Size = new System.Drawing.Size(132, 17);
             this.chkEnableColorDetection.TabIndex = 0;
@@ -131,6 +133,8 @@
             // 
             // tabCompression
             // 
+            this.tabCompression.Controls.Add(this.lbColorDetection);
+            this.tabCompression.Controls.Add(this.lbMrc);
             this.tabCompression.Controls.Add(this.chkPreserveSmoothing);
             this.tabCompression.Controls.Add(this.chkPackFonts);
             this.tabCompression.Controls.Add(this.chkUseMRC);
@@ -144,11 +148,20 @@
             this.tabCompression.Text = "Compression";
             this.tabCompression.UseVisualStyleBackColor = true;
             // 
+            // lbMrc
+            // 
+            this.lbMrc.AutoSize = true;
+            this.lbMrc.Location = new System.Drawing.Point(6, 108);
+            this.lbMrc.Name = "lbMrc";
+            this.lbMrc.Size = new System.Drawing.Size(34, 13);
+            this.lbMrc.TabIndex = 19;
+            this.lbMrc.Text = "MRC:";
+            // 
             // chkPreserveSmoothing
             // 
             this.chkPreserveSmoothing.AutoSize = true;
             this.chkPreserveSmoothing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.chkPreserveSmoothing.Location = new System.Drawing.Point(15, 107);
+            this.chkPreserveSmoothing.Location = new System.Drawing.Point(15, 149);
             this.chkPreserveSmoothing.Name = "chkPreserveSmoothing";
             this.chkPreserveSmoothing.Size = new System.Drawing.Size(119, 17);
             this.chkPreserveSmoothing.TabIndex = 18;
@@ -158,7 +171,7 @@
             // chkPackFonts
             // 
             this.chkPackFonts.AutoSize = true;
-            this.chkPackFonts.Location = new System.Drawing.Point(15, 61);
+            this.chkPackFonts.Location = new System.Drawing.Point(15, 15);
             this.chkPackFonts.Name = "chkPackFonts";
             this.chkPackFonts.Size = new System.Drawing.Size(77, 17);
             this.chkPackFonts.TabIndex = 17;
@@ -169,7 +182,7 @@
             // 
             this.chkUseMRC.AutoSize = true;
             this.chkUseMRC.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.chkUseMRC.Location = new System.Drawing.Point(15, 84);
+            this.chkUseMRC.Location = new System.Drawing.Point(15, 126);
             this.chkUseMRC.Name = "chkUseMRC";
             this.chkUseMRC.Size = new System.Drawing.Size(253, 17);
             this.chkUseMRC.TabIndex = 16;
@@ -181,7 +194,7 @@
             // 
             this.chkCharRepair.AutoSize = true;
             this.chkCharRepair.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.chkCharRepair.Location = new System.Drawing.Point(15, 38);
+            this.chkCharRepair.Location = new System.Drawing.Point(15, 82);
             this.chkCharRepair.Name = "chkCharRepair";
             this.chkCharRepair.Size = new System.Drawing.Size(213, 17);
             this.chkCharRepair.TabIndex = 8;
@@ -514,6 +527,15 @@
             // 
             this.toolTipPreferredVersion.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
+            // lbColorDetection
+            // 
+            this.lbColorDetection.AutoSize = true;
+            this.lbColorDetection.Location = new System.Drawing.Point(6, 41);
+            this.lbColorDetection.Name = "lbColorDetection";
+            this.lbColorDetection.Size = new System.Drawing.Size(81, 13);
+            this.lbColorDetection.TabIndex = 20;
+            this.lbColorDetection.Text = "Color detection:";
+            // 
             // frmOptions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -583,5 +605,7 @@
         private System.Windows.Forms.CheckBox chkRemoveBlankPages;
         private System.Windows.Forms.CheckBox chkRemoveJavaScript;
         private System.Windows.Forms.CheckBox chkPreserveSmoothing;
+        private System.Windows.Forms.Label lbMrc;
+        private System.Windows.Forms.Label lbColorDetection;
     }
 }

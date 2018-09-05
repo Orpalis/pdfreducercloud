@@ -155,8 +155,8 @@
     "Name": "label_chkUseMRC",
     "ResourceIDs": "*",
     "LocalizedValue": {
-      "fr": "Activer la compression MRC (Mixed raster content)",
-      "en": "Enable MRC (Mixed raster content) compression"
+      "fr": "Activer la compression MRC",
+      "en": "Enable MRC compression"
     }
   },
   {
@@ -341,6 +341,22 @@
     "LocalizedValue": {
       "fr": "Préserver l'adoucissement des contours",
       "en": "Preserve smoothing"
+    }
+  },
+  {
+    "Name": "label_lbColorDetection",
+    "ResourceIDs": "*",
+    "LocalizedValue": {
+      "fr": "Détection de couleur:",
+      "en": "Color detection:"
+    }
+  },
+  {
+    "Name": "label_lbMrc",
+    "ResourceIDs": "*",
+    "LocalizedValue": {
+      "fr": "MRC (Mixed Raster Content):",
+      "en": "MRC (Mixed Raster Content):"
     }
   }
 ]

@@ -33,6 +33,10 @@
             this.chkDeleteOriginalFileOnSuccess = new System.Windows.Forms.CheckBox();
             this.chkEnableColorDetection = new System.Windows.Forms.CheckBox();
             this.tabCompression = new System.Windows.Forms.TabPage();
+            this.lbDpi2 = new System.Windows.Forms.Label();
+            this.nuBackgroundResolution = new System.Windows.Forms.NumericUpDown();
+            this.lbBackgroundLayerResolution = new System.Windows.Forms.Label();
+            this.lbColorDetection = new System.Windows.Forms.Label();
             this.lbMrc = new System.Windows.Forms.Label();
             this.chkPreserveSmoothing = new System.Windows.Forms.CheckBox();
             this.chkPackFonts = new System.Windows.Forms.CheckBox();
@@ -68,10 +72,10 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolTipPreferredVersion = new System.Windows.Forms.ToolTip(this.components);
-            this.lbColorDetection = new System.Windows.Forms.Label();
             this.tabGeneral.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabCompression.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nuBackgroundResolution)).BeginInit();
             this.tabBitmap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuDownscaleResolution)).BeginInit();
             this.tabContentRemoval.SuspendLayout();
@@ -133,6 +137,9 @@
             // 
             // tabCompression
             // 
+            this.tabCompression.Controls.Add(this.lbDpi2);
+            this.tabCompression.Controls.Add(this.nuBackgroundResolution);
+            this.tabCompression.Controls.Add(this.lbBackgroundLayerResolution);
             this.tabCompression.Controls.Add(this.lbColorDetection);
             this.tabCompression.Controls.Add(this.lbMrc);
             this.tabCompression.Controls.Add(this.chkPreserveSmoothing);
@@ -147,6 +154,55 @@
             this.tabCompression.TabIndex = 0;
             this.tabCompression.Text = "Compression";
             this.tabCompression.UseVisualStyleBackColor = true;
+            // 
+            // lbDpi2
+            // 
+            this.lbDpi2.AutoSize = true;
+            this.lbDpi2.Location = new System.Drawing.Point(231, 173);
+            this.lbDpi2.Name = "lbDpi2";
+            this.lbDpi2.Size = new System.Drawing.Size(21, 13);
+            this.lbDpi2.TabIndex = 23;
+            this.lbDpi2.Text = "dpi";
+            // 
+            // nuBackgroundResolution
+            // 
+            this.nuBackgroundResolution.Location = new System.Drawing.Point(175, 171);
+            this.nuBackgroundResolution.Maximum = new decimal(new int[] {
+            1200,
+            0,
+            0,
+            0});
+            this.nuBackgroundResolution.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.nuBackgroundResolution.Name = "nuBackgroundResolution";
+            this.nuBackgroundResolution.Size = new System.Drawing.Size(50, 20);
+            this.nuBackgroundResolution.TabIndex = 22;
+            this.nuBackgroundResolution.Value = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            // 
+            // lbBackgroundLayerResolution
+            // 
+            this.lbBackgroundLayerResolution.AutoSize = true;
+            this.lbBackgroundLayerResolution.Location = new System.Drawing.Point(12, 173);
+            this.lbBackgroundLayerResolution.Name = "lbBackgroundLayerResolution";
+            this.lbBackgroundLayerResolution.Size = new System.Drawing.Size(141, 13);
+            this.lbBackgroundLayerResolution.TabIndex = 21;
+            this.lbBackgroundLayerResolution.Text = "Background layer resolution:";
+            // 
+            // lbColorDetection
+            // 
+            this.lbColorDetection.AutoSize = true;
+            this.lbColorDetection.Location = new System.Drawing.Point(6, 41);
+            this.lbColorDetection.Name = "lbColorDetection";
+            this.lbColorDetection.Size = new System.Drawing.Size(81, 13);
+            this.lbColorDetection.TabIndex = 20;
+            this.lbColorDetection.Text = "Color detection:";
             // 
             // lbMrc
             // 
@@ -527,15 +583,6 @@
             // 
             this.toolTipPreferredVersion.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
-            // lbColorDetection
-            // 
-            this.lbColorDetection.AutoSize = true;
-            this.lbColorDetection.Location = new System.Drawing.Point(6, 41);
-            this.lbColorDetection.Name = "lbColorDetection";
-            this.lbColorDetection.Size = new System.Drawing.Size(81, 13);
-            this.lbColorDetection.TabIndex = 20;
-            this.lbColorDetection.Text = "Color detection:";
-            // 
             // frmOptions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -552,6 +599,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabCompression.ResumeLayout(false);
             this.tabCompression.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nuBackgroundResolution)).EndInit();
             this.tabBitmap.ResumeLayout(false);
             this.tabBitmap.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuDownscaleResolution)).EndInit();
@@ -607,5 +655,8 @@
         private System.Windows.Forms.CheckBox chkPreserveSmoothing;
         private System.Windows.Forms.Label lbMrc;
         private System.Windows.Forms.Label lbColorDetection;
+        private System.Windows.Forms.NumericUpDown nuBackgroundResolution;
+        private System.Windows.Forms.Label lbBackgroundLayerResolution;
+        private System.Windows.Forms.Label lbDpi2;
     }
 }

@@ -358,5 +358,21 @@
       "fr": "MRC (Mixed Raster Content):",
       "en": "MRC (Mixed Raster Content):"
     }
+  },
+  {
+    "Name": "label_lbDpi2",
+    "ResourceIDs": "*",
+    "LocalizedValue": {
+      "fr": "dpi",
+      "en": "dpi"
+    }
+  },
+  {
+    "Name": "label_lbBackgroundImageResolution",
+    "ResourceIDs": "*",
+    "LocalizedValue": {
+      "fr": "Résolution de la couche arrière:",
+      "en": "Background layer resolution:"
+    }
   }
 ]

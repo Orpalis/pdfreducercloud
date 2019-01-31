@@ -33,15 +33,17 @@
             this.chkDeleteOriginalFileOnSuccess = new System.Windows.Forms.CheckBox();
             this.chkEnableColorDetection = new System.Windows.Forms.CheckBox();
             this.tabCompression = new System.Windows.Forms.TabPage();
+            this.lbFonts = new System.Windows.Forms.Label();
             this.lbDpi2 = new System.Windows.Forms.Label();
-            this.nuBackgroundResolution = new System.Windows.Forms.NumericUpDown();
-            this.lbBackgroundLayerResolution = new System.Windows.Forms.Label();
+            this.nuBackgroundImageResolution = new System.Windows.Forms.NumericUpDown();
+            this.lbBackgroundImageResolution = new System.Windows.Forms.Label();
             this.lbColorDetection = new System.Windows.Forms.Label();
             this.lbMrc = new System.Windows.Forms.Label();
             this.chkPreserveSmoothing = new System.Windows.Forms.CheckBox();
             this.chkPackFonts = new System.Windows.Forms.CheckBox();
             this.chkUseMRC = new System.Windows.Forms.CheckBox();
             this.chkCharRepair = new System.Windows.Forms.CheckBox();
+            this.panelCompression = new System.Windows.Forms.Panel();
             this.tabBitmap = new System.Windows.Forms.TabPage();
             this.chkJBIG2 = new System.Windows.Forms.CheckBox();
             this.lbDpi = new System.Windows.Forms.Label();
@@ -49,10 +51,10 @@
             this.chkDownscaleImages = new System.Windows.Forms.CheckBox();
             this.chkJPEG2000 = new System.Windows.Forms.CheckBox();
             this.cmbImageQuality = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.nuDownscaleResolution = new System.Windows.Forms.NumericUpDown();
             this.lbResolution = new System.Windows.Forms.Label();
             this.lbQuality = new System.Windows.Forms.Label();
+            this.panelImages = new System.Windows.Forms.Panel();
             this.tabContentRemoval = new System.Windows.Forms.TabPage();
             this.chkRemoveJavaScript = new System.Windows.Forms.CheckBox();
             this.chkRemoveBlankPages = new System.Windows.Forms.CheckBox();
@@ -64,18 +66,20 @@
             this.chkRemoveBookmarks = new System.Windows.Forms.CheckBox();
             this.chkRemoveFormFields = new System.Windows.Forms.CheckBox();
             this.chkRemoveAnnotations = new System.Windows.Forms.CheckBox();
+            this.panelContentRemoval = new System.Windows.Forms.Panel();
             this.tabOutputFormat = new System.Windows.Forms.TabPage();
             this.chkKeepWriteAcessTime = new System.Windows.Forms.CheckBox();
             this.cmbPreferredVersion = new System.Windows.Forms.ComboBox();
             this.lbPreferredVersion = new System.Windows.Forms.Label();
             this.chkFastWebView = new System.Windows.Forms.CheckBox();
+            this.panelOutputFormat = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.toolTipPreferredVersion = new System.Windows.Forms.ToolTip(this.components);
             this.tabGeneral.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabCompression.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nuBackgroundResolution)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuBackgroundImageResolution)).BeginInit();
             this.tabBitmap.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuDownscaleResolution)).BeginInit();
             this.tabContentRemoval.SuspendLayout();
@@ -127,7 +131,7 @@
             // chkEnableColorDetection
             // 
             this.chkEnableColorDetection.AutoSize = true;
-            this.chkEnableColorDetection.Location = new System.Drawing.Point(15, 59);
+            this.chkEnableColorDetection.Location = new System.Drawing.Point(35, 77);
             this.chkEnableColorDetection.Name = "chkEnableColorDetection";
             this.chkEnableColorDetection.Size = new System.Drawing.Size(132, 17);
             this.chkEnableColorDetection.TabIndex = 0;
@@ -137,9 +141,10 @@
             // 
             // tabCompression
             // 
+            this.tabCompression.Controls.Add(this.lbFonts);
             this.tabCompression.Controls.Add(this.lbDpi2);
-            this.tabCompression.Controls.Add(this.nuBackgroundResolution);
-            this.tabCompression.Controls.Add(this.lbBackgroundLayerResolution);
+            this.tabCompression.Controls.Add(this.nuBackgroundImageResolution);
+            this.tabCompression.Controls.Add(this.lbBackgroundImageResolution);
             this.tabCompression.Controls.Add(this.lbColorDetection);
             this.tabCompression.Controls.Add(this.lbMrc);
             this.tabCompression.Controls.Add(this.chkPreserveSmoothing);
@@ -147,6 +152,7 @@
             this.tabCompression.Controls.Add(this.chkUseMRC);
             this.tabCompression.Controls.Add(this.chkCharRepair);
             this.tabCompression.Controls.Add(this.chkEnableColorDetection);
+            this.tabCompression.Controls.Add(this.panelCompression);
             this.tabCompression.Location = new System.Drawing.Point(4, 22);
             this.tabCompression.Name = "tabCompression";
             this.tabCompression.Padding = new System.Windows.Forms.Padding(3);
@@ -155,50 +161,59 @@
             this.tabCompression.Text = "Compression";
             this.tabCompression.UseVisualStyleBackColor = true;
             // 
+            // lbFonts
+            // 
+            this.lbFonts.AutoSize = true;
+            this.lbFonts.Location = new System.Drawing.Point(15, 15);
+            this.lbFonts.Name = "lbFonts";
+            this.lbFonts.Size = new System.Drawing.Size(33, 13);
+            this.lbFonts.TabIndex = 24;
+            this.lbFonts.Text = "Fonts";
+            // 
             // lbDpi2
             // 
             this.lbDpi2.AutoSize = true;
-            this.lbDpi2.Location = new System.Drawing.Point(231, 173);
+            this.lbDpi2.Location = new System.Drawing.Point(251, 191);
             this.lbDpi2.Name = "lbDpi2";
             this.lbDpi2.Size = new System.Drawing.Size(21, 13);
             this.lbDpi2.TabIndex = 23;
             this.lbDpi2.Text = "dpi";
             // 
-            // nuBackgroundResolution
+            // nuBackgroundImageResolution
             // 
-            this.nuBackgroundResolution.Location = new System.Drawing.Point(175, 171);
-            this.nuBackgroundResolution.Maximum = new decimal(new int[] {
+            this.nuBackgroundImageResolution.Location = new System.Drawing.Point(195, 189);
+            this.nuBackgroundImageResolution.Maximum = new decimal(new int[] {
             1200,
             0,
             0,
             0});
-            this.nuBackgroundResolution.Minimum = new decimal(new int[] {
+            this.nuBackgroundImageResolution.Minimum = new decimal(new int[] {
             10,
             0,
             0,
             0});
-            this.nuBackgroundResolution.Name = "nuBackgroundResolution";
-            this.nuBackgroundResolution.Size = new System.Drawing.Size(50, 20);
-            this.nuBackgroundResolution.TabIndex = 22;
-            this.nuBackgroundResolution.Value = new decimal(new int[] {
+            this.nuBackgroundImageResolution.Name = "nuBackgroundImageResolution";
+            this.nuBackgroundImageResolution.Size = new System.Drawing.Size(50, 20);
+            this.nuBackgroundImageResolution.TabIndex = 22;
+            this.nuBackgroundImageResolution.Value = new decimal(new int[] {
             100,
             0,
             0,
             0});
             // 
-            // lbBackgroundLayerResolution
+            // lbBackgroundImageResolution
             // 
-            this.lbBackgroundLayerResolution.AutoSize = true;
-            this.lbBackgroundLayerResolution.Location = new System.Drawing.Point(12, 173);
-            this.lbBackgroundLayerResolution.Name = "lbBackgroundLayerResolution";
-            this.lbBackgroundLayerResolution.Size = new System.Drawing.Size(141, 13);
-            this.lbBackgroundLayerResolution.TabIndex = 21;
-            this.lbBackgroundLayerResolution.Text = "Background layer resolution:";
+            this.lbBackgroundImageResolution.AutoSize = true;
+            this.lbBackgroundImageResolution.Location = new System.Drawing.Point(32, 191);
+            this.lbBackgroundImageResolution.Name = "lbBackgroundImageResolution";
+            this.lbBackgroundImageResolution.Size = new System.Drawing.Size(141, 13);
+            this.lbBackgroundImageResolution.TabIndex = 21;
+            this.lbBackgroundImageResolution.Text = "Background layer resolution:";
             // 
             // lbColorDetection
             // 
             this.lbColorDetection.AutoSize = true;
-            this.lbColorDetection.Location = new System.Drawing.Point(6, 41);
+            this.lbColorDetection.Location = new System.Drawing.Point(15, 60);
             this.lbColorDetection.Name = "lbColorDetection";
             this.lbColorDetection.Size = new System.Drawing.Size(81, 13);
             this.lbColorDetection.TabIndex = 20;
@@ -207,7 +222,7 @@
             // lbMrc
             // 
             this.lbMrc.AutoSize = true;
-            this.lbMrc.Location = new System.Drawing.Point(6, 108);
+            this.lbMrc.Location = new System.Drawing.Point(15, 126);
             this.lbMrc.Name = "lbMrc";
             this.lbMrc.Size = new System.Drawing.Size(34, 13);
             this.lbMrc.TabIndex = 19;
@@ -217,7 +232,7 @@
             // 
             this.chkPreserveSmoothing.AutoSize = true;
             this.chkPreserveSmoothing.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.chkPreserveSmoothing.Location = new System.Drawing.Point(15, 149);
+            this.chkPreserveSmoothing.Location = new System.Drawing.Point(35, 167);
             this.chkPreserveSmoothing.Name = "chkPreserveSmoothing";
             this.chkPreserveSmoothing.Size = new System.Drawing.Size(119, 17);
             this.chkPreserveSmoothing.TabIndex = 18;
@@ -227,18 +242,18 @@
             // chkPackFonts
             // 
             this.chkPackFonts.AutoSize = true;
-            this.chkPackFonts.Location = new System.Drawing.Point(15, 15);
+            this.chkPackFonts.Location = new System.Drawing.Point(35, 35);
             this.chkPackFonts.Name = "chkPackFonts";
-            this.chkPackFonts.Size = new System.Drawing.Size(77, 17);
+            this.chkPackFonts.Size = new System.Drawing.Size(92, 17);
             this.chkPackFonts.TabIndex = 17;
-            this.chkPackFonts.Text = "Pack fonts";
+            this.chkPackFonts.Text = "Optimize fonts";
             this.chkPackFonts.UseVisualStyleBackColor = true;
             // 
             // chkUseMRC
             // 
             this.chkUseMRC.AutoSize = true;
             this.chkUseMRC.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.chkUseMRC.Location = new System.Drawing.Point(15, 126);
+            this.chkUseMRC.Location = new System.Drawing.Point(35, 144);
             this.chkUseMRC.Name = "chkUseMRC";
             this.chkUseMRC.Size = new System.Drawing.Size(253, 17);
             this.chkUseMRC.TabIndex = 16;
@@ -250,12 +265,21 @@
             // 
             this.chkCharRepair.AutoSize = true;
             this.chkCharRepair.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.chkCharRepair.Location = new System.Drawing.Point(15, 82);
+            this.chkCharRepair.Location = new System.Drawing.Point(35, 100);
             this.chkCharRepair.Name = "chkCharRepair";
             this.chkCharRepair.Size = new System.Drawing.Size(213, 17);
             this.chkCharRepair.TabIndex = 8;
             this.chkCharRepair.Text = "Apply character repairing after threshold";
             this.chkCharRepair.UseVisualStyleBackColor = true;
+            // 
+            // panelCompression
+            // 
+            this.panelCompression.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelCompression.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelCompression.Location = new System.Drawing.Point(3, 3);
+            this.panelCompression.Name = "panelCompression";
+            this.panelCompression.Size = new System.Drawing.Size(479, 211);
+            this.panelCompression.TabIndex = 25;
             // 
             // tabBitmap
             // 
@@ -265,12 +289,13 @@
             this.tabBitmap.Controls.Add(this.chkDownscaleImages);
             this.tabBitmap.Controls.Add(this.chkJPEG2000);
             this.tabBitmap.Controls.Add(this.cmbImageQuality);
-            this.tabBitmap.Controls.Add(this.label3);
             this.tabBitmap.Controls.Add(this.nuDownscaleResolution);
             this.tabBitmap.Controls.Add(this.lbResolution);
             this.tabBitmap.Controls.Add(this.lbQuality);
+            this.tabBitmap.Controls.Add(this.panelImages);
             this.tabBitmap.Location = new System.Drawing.Point(4, 22);
             this.tabBitmap.Name = "tabBitmap";
+            this.tabBitmap.Padding = new System.Windows.Forms.Padding(3);
             this.tabBitmap.Size = new System.Drawing.Size(485, 217);
             this.tabBitmap.TabIndex = 2;
             this.tabBitmap.Text = "Images";
@@ -334,21 +359,14 @@
             // 
             this.cmbImageQuality.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbImageQuality.FormattingEnabled = true;
-            this.cmbImageQuality.Location = new System.Drawing.Point(93, 35);
+            this.cmbImageQuality.Location = new System.Drawing.Point(90, 32);
             this.cmbImageQuality.Name = "cmbImageQuality";
             this.cmbImageQuality.Size = new System.Drawing.Size(94, 21);
             this.cmbImageQuality.TabIndex = 5;
             // 
-            // label3
-            // 
-            this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 23);
-            this.label3.TabIndex = 11;
-            // 
             // nuDownscaleResolution
             // 
-            this.nuDownscaleResolution.Location = new System.Drawing.Point(129, 131);
+            this.nuDownscaleResolution.Location = new System.Drawing.Point(126, 128);
             this.nuDownscaleResolution.Maximum = new decimal(new int[] {
             1200,
             0,
@@ -386,6 +404,15 @@
             this.lbQuality.TabIndex = 0;
             this.lbQuality.Text = "Image quality:";
             // 
+            // panelImages
+            // 
+            this.panelImages.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelImages.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelImages.Location = new System.Drawing.Point(3, 3);
+            this.panelImages.Name = "panelImages";
+            this.panelImages.Size = new System.Drawing.Size(479, 211);
+            this.panelImages.TabIndex = 18;
+            // 
             // tabContentRemoval
             // 
             this.tabContentRemoval.Controls.Add(this.chkRemoveJavaScript);
@@ -398,8 +425,10 @@
             this.tabContentRemoval.Controls.Add(this.chkRemoveBookmarks);
             this.tabContentRemoval.Controls.Add(this.chkRemoveFormFields);
             this.tabContentRemoval.Controls.Add(this.chkRemoveAnnotations);
+            this.tabContentRemoval.Controls.Add(this.panelContentRemoval);
             this.tabContentRemoval.Location = new System.Drawing.Point(4, 22);
             this.tabContentRemoval.Name = "tabContentRemoval";
+            this.tabContentRemoval.Padding = new System.Windows.Forms.Padding(3);
             this.tabContentRemoval.Size = new System.Drawing.Size(485, 217);
             this.tabContentRemoval.TabIndex = 4;
             this.tabContentRemoval.Text = "Content Removal";
@@ -507,14 +536,25 @@
             this.chkRemoveAnnotations.Text = "Remove annotations";
             this.chkRemoveAnnotations.UseVisualStyleBackColor = true;
             // 
+            // panelContentRemoval
+            // 
+            this.panelContentRemoval.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelContentRemoval.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContentRemoval.Location = new System.Drawing.Point(3, 3);
+            this.panelContentRemoval.Name = "panelContentRemoval";
+            this.panelContentRemoval.Size = new System.Drawing.Size(479, 211);
+            this.panelContentRemoval.TabIndex = 26;
+            // 
             // tabOutputFormat
             // 
             this.tabOutputFormat.Controls.Add(this.chkKeepWriteAcessTime);
             this.tabOutputFormat.Controls.Add(this.cmbPreferredVersion);
             this.tabOutputFormat.Controls.Add(this.lbPreferredVersion);
             this.tabOutputFormat.Controls.Add(this.chkFastWebView);
+            this.tabOutputFormat.Controls.Add(this.panelOutputFormat);
             this.tabOutputFormat.Location = new System.Drawing.Point(4, 22);
             this.tabOutputFormat.Name = "tabOutputFormat";
+            this.tabOutputFormat.Padding = new System.Windows.Forms.Padding(3);
             this.tabOutputFormat.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tabOutputFormat.Size = new System.Drawing.Size(485, 217);
             this.tabOutputFormat.TabIndex = 3;
@@ -524,7 +564,7 @@
             // chkKeepWriteAcessTime
             // 
             this.chkKeepWriteAcessTime.AutoSize = true;
-            this.chkKeepWriteAcessTime.Location = new System.Drawing.Point(15, 63);
+            this.chkKeepWriteAcessTime.Location = new System.Drawing.Point(18, 66);
             this.chkKeepWriteAcessTime.Name = "chkKeepWriteAcessTime";
             this.chkKeepWriteAcessTime.Size = new System.Drawing.Size(184, 17);
             this.chkKeepWriteAcessTime.TabIndex = 4;
@@ -535,14 +575,14 @@
             // 
             this.cmbPreferredVersion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPreferredVersion.FormattingEnabled = true;
-            this.cmbPreferredVersion.Location = new System.Drawing.Point(107, 13);
+            this.cmbPreferredVersion.Location = new System.Drawing.Point(121, 12);
             this.cmbPreferredVersion.Name = "cmbPreferredVersion";
             this.cmbPreferredVersion.Size = new System.Drawing.Size(121, 21);
             this.cmbPreferredVersion.TabIndex = 3;
             // 
             // lbPreferredVersion
             // 
-            this.lbPreferredVersion.Location = new System.Drawing.Point(12, 16);
+            this.lbPreferredVersion.Location = new System.Drawing.Point(15, 15);
             this.lbPreferredVersion.Name = "lbPreferredVersion";
             this.lbPreferredVersion.Size = new System.Drawing.Size(100, 23);
             this.lbPreferredVersion.TabIndex = 5;
@@ -551,12 +591,21 @@
             // chkFastWebView
             // 
             this.chkFastWebView.AutoSize = true;
-            this.chkFastWebView.Location = new System.Drawing.Point(15, 40);
+            this.chkFastWebView.Location = new System.Drawing.Point(18, 43);
             this.chkFastWebView.Name = "chkFastWebView";
             this.chkFastWebView.Size = new System.Drawing.Size(127, 17);
             this.chkFastWebView.TabIndex = 1;
             this.chkFastWebView.Text = "Enable fast web view";
             this.chkFastWebView.UseVisualStyleBackColor = true;
+            // 
+            // panelOutputFormat
+            // 
+            this.panelOutputFormat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelOutputFormat.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelOutputFormat.Location = new System.Drawing.Point(3, 3);
+            this.panelOutputFormat.Name = "panelOutputFormat";
+            this.panelOutputFormat.Size = new System.Drawing.Size(479, 211);
+            this.panelOutputFormat.TabIndex = 26;
             // 
             // pictureBox2
             // 
@@ -588,18 +637,16 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(497, 344);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmOptions";
-            this.Controls.SetChildIndex(this.tabControl1, 0);
             this.Controls.SetChildIndex(this.pictureBox1, 0);
-            this.Controls.SetChildIndex(this.pictureBox2, 0);
+            this.Controls.SetChildIndex(this.tabControl1, 0);
             this.tabGeneral.ResumeLayout(false);
             this.tabGeneral.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabCompression.ResumeLayout(false);
             this.tabCompression.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nuBackgroundResolution)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nuBackgroundImageResolution)).EndInit();
             this.tabBitmap.ResumeLayout(false);
             this.tabBitmap.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nuDownscaleResolution)).EndInit();
@@ -621,7 +668,6 @@
         private System.Windows.Forms.TabPage tabCompression;
         private System.Windows.Forms.TabPage tabBitmap;
         private System.Windows.Forms.Label lbQuality;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown nuDownscaleResolution;
         private System.Windows.Forms.Label lbResolution;
         private System.Windows.Forms.TabPage tabOutputFormat;
@@ -655,8 +701,13 @@
         private System.Windows.Forms.CheckBox chkPreserveSmoothing;
         private System.Windows.Forms.Label lbMrc;
         private System.Windows.Forms.Label lbColorDetection;
-        private System.Windows.Forms.NumericUpDown nuBackgroundResolution;
-        private System.Windows.Forms.Label lbBackgroundLayerResolution;
+        private System.Windows.Forms.NumericUpDown nuBackgroundImageResolution;
+        private System.Windows.Forms.Label lbBackgroundImageResolution;
         private System.Windows.Forms.Label lbDpi2;
+        private System.Windows.Forms.Label lbFonts;
+        private System.Windows.Forms.Panel panelImages;
+        private System.Windows.Forms.Panel panelCompression;
+        private System.Windows.Forms.Panel panelContentRemoval;
+        private System.Windows.Forms.Panel panelOutputFormat;
     }
 }

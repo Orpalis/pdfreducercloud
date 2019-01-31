@@ -374,5 +374,13 @@
       "fr": "Résolution de la couche arrière:",
       "en": "Background layer resolution:"
     }
+  },
+  {
+    "Name": "label_lbFonts",
+    "ResourceIDs": "*",
+    "LocalizedValue": {
+      "fr": "Polices",
+      "en": "Fonts"
+    }
   }
 ]

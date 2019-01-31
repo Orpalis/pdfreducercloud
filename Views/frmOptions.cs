@@ -55,6 +55,7 @@ namespace pdfReducerCloud.Views
             chkRemoveJavaScript.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_chkRemoveJavaScript", FrameworkGlobals.ApplicationLanguage);
             chkUseMRC.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_chkUseMRC", FrameworkGlobals.ApplicationLanguage);
             chkPreserveSmoothing.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_chkPreserveSmoothing", FrameworkGlobals.ApplicationLanguage);
+            lbFonts.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_lbFonts", FrameworkGlobals.ApplicationLanguage);
             chkPackFonts.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_chkPackFonts", FrameworkGlobals.ApplicationLanguage);
             lbDocumentContent.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_lbDocumentContent", FrameworkGlobals.ApplicationLanguage);
             lbInteractiveContent.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_lbInteractiveContent", FrameworkGlobals.ApplicationLanguage);
@@ -68,7 +69,7 @@ namespace pdfReducerCloud.Views
             tabContentRemoval.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_tabContentRemoval", FrameworkGlobals.ApplicationLanguage);
             tabOutputFormat.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_tabOutputFormat", FrameworkGlobals.ApplicationLanguage);
             tabCompression.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_tabCompression", FrameworkGlobals.ApplicationLanguage);
-            lbBackgroundLayerResolution.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_lbBackgroundImageResolution", FrameworkGlobals.ApplicationLanguage);
+            lbBackgroundImageResolution.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_lbBackgroundImageResolution", FrameworkGlobals.ApplicationLanguage);
             lbDpi2.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_lbDpi2", FrameworkGlobals.ApplicationLanguage);
 
             cmbImageQuality.Items.AddRange(new object[]
@@ -118,7 +119,7 @@ namespace pdfReducerCloud.Views
             chkPreserveSmoothing.Checked = PdfReducerGlobals.ReduceActionConfiguration.MRCPreserveSmoothing;
             chkKeepWriteAcessTime.Checked = FrameworkGlobals.ApplicationConfiguration.FileProductionRules.KeepWriteAndAccessTime;
             chkPackFonts.Checked = PdfReducerGlobals.ReduceActionConfiguration.PackFonts;
-            nuBackgroundResolution.Value = PdfReducerGlobals.ReduceActionConfiguration.MRCDownscaleResolution;
+            nuBackgroundImageResolution.Value = PdfReducerGlobals.ReduceActionConfiguration.MRCDownscaleResolution;
 
             switch (PdfReducerGlobals.ReduceActionConfiguration.OutputVersion)
             {
@@ -159,12 +160,17 @@ namespace pdfReducerCloud.Views
                     break;
             }
 
+
             // Check whether mutually exclusive options should be disabled
             chkCharRepair.Enabled = PdfReducerGlobals.ReduceActionConfiguration.EnableColorDetection;
-            chkPreserveSmoothing.Enabled = PdfReducerGlobals.ReduceActionConfiguration.EnableMRC;
-            nuDownscaleResolution.Enabled = PdfReducerGlobals.ReduceActionConfiguration.DownscaleImages;
             cmbImageQuality.Enabled = PdfReducerGlobals.ReduceActionConfiguration.RecompressImages;
-            nuBackgroundResolution.Enabled = PdfReducerGlobals.ReduceActionConfiguration.EnableMRC;
+            nuDownscaleResolution.Enabled = PdfReducerGlobals.ReduceActionConfiguration.DownscaleImages;
+            lbDpi.Enabled = PdfReducerGlobals.ReduceActionConfiguration.DownscaleImages;
+            lbResolution.Enabled = PdfReducerGlobals.ReduceActionConfiguration.DownscaleImages;
+            chkPreserveSmoothing.Enabled = PdfReducerGlobals.ReduceActionConfiguration.EnableMRC;
+            lbBackgroundImageResolution.Enabled = PdfReducerGlobals.ReduceActionConfiguration.EnableMRC;
+            lbDpi2.Enabled = PdfReducerGlobals.ReduceActionConfiguration.EnableMRC;
+            nuBackgroundImageResolution.Enabled = PdfReducerGlobals.ReduceActionConfiguration.EnableMRC;
         }
 
 
@@ -195,7 +201,7 @@ namespace pdfReducerCloud.Views
             PdfReducerGlobals.ReduceActionConfiguration.MRCPreserveSmoothing = chkPreserveSmoothing.Checked;
             PdfReducerGlobals.ReduceActionConfiguration.EnableCharRepair = chkCharRepair.Checked;
             PdfReducerGlobals.ReduceActionConfiguration.PackFonts = chkPackFonts.Checked;
-            PdfReducerGlobals.ReduceActionConfiguration.MRCDownscaleResolution = (int)nuBackgroundResolution.Value;
+            PdfReducerGlobals.ReduceActionConfiguration.MRCDownscaleResolution = (int)nuBackgroundImageResolution.Value;
 
             switch (cmbImageQuality.SelectedIndex)
             {
@@ -254,13 +260,17 @@ namespace pdfReducerCloud.Views
         private void chkUseMRC_CheckedChanged(object sender, EventArgs e)
         {
             chkPreserveSmoothing.Enabled = chkUseMRC.Checked;
-            nuBackgroundResolution.Enabled = chkUseMRC.Checked;
+            nuBackgroundImageResolution.Enabled = chkUseMRC.Checked;
+            lbBackgroundImageResolution.Enabled = chkUseMRC.Checked;
+            lbDpi2.Enabled = chkUseMRC.Checked;
         }
 
 
         private void chkDownscaleImages_CheckedChanged(object sender, EventArgs e)
         {
             nuDownscaleResolution.Enabled = chkDownscaleImages.Checked;
+            lbDpi.Enabled = chkDownscaleImages.Checked;
+            lbResolution.Enabled = chkDownscaleImages.Checked;
         }
 
 

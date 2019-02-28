@@ -107,7 +107,7 @@ namespace pdfReducerCloud.Controller
 
             _view.NotifyOperationCompletion(operationsCompletionMessage);
 
-            if (!string.IsNullOrEmpty(FrameworkGlobals.ApplicationConfiguration.LogsPath) && FrameworkGlobals.ApplicationConfiguration.ExportLogs)
+            if (FrameworkGlobals.ApplicationConfiguration.ExportLogs && !string.IsNullOrEmpty(FrameworkGlobals.ApplicationConfiguration.LogsPath))
             {
                 FrameworkGlobals.LogsManager.LogMessage(operationsCompletionMessage);
             }

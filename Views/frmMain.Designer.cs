@@ -63,7 +63,6 @@ namespace pdfReducerCloud.Views
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.ClientSize = new System.Drawing.Size(497, 388);
             this.Controls.Add(this.lbCompRatio);
             this.Controls.Add(this.lbCompRatioPct);

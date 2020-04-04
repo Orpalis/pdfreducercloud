@@ -71,7 +71,8 @@ namespace pdfReducerCloud.Views
             tabCompression.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_tabCompression", FrameworkGlobals.ApplicationLanguage);
             lbBackgroundImageResolution.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_lbBackgroundImageResolution", FrameworkGlobals.ApplicationLanguage);
             lbDpi2.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_lbDpi2", FrameworkGlobals.ApplicationLanguage);
-
+            chkRemoveMetadata.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_chkRemoveMetadata", FrameworkGlobals.ApplicationLanguage);
+            chkRemovePageThumbnails.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_chkRemovePageThumbnails", FrameworkGlobals.ApplicationLanguage);
             cmbImageQuality.Items.AddRange(new object[]
             {
                 PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbImageQuality.Items", FrameworkGlobals.ApplicationLanguage),
@@ -120,42 +121,44 @@ namespace pdfReducerCloud.Views
             chkKeepWriteAcessTime.Checked = FrameworkGlobals.ApplicationConfiguration.FileProductionRules.KeepWriteAndAccessTime;
             chkPackFonts.Checked = PdfReducerGlobals.ReduceActionConfiguration.PackFonts;
             nuBackgroundImageResolution.Value = PdfReducerGlobals.ReduceActionConfiguration.MRCDownscaleResolution;
+            chkRemovePageThumbnails.Checked = PdfReducerGlobals.ReduceActionConfiguration.RemovePageThumbnails;
+            chkRemoveMetadata.Checked = PdfReducerGlobals.ReduceActionConfiguration.RemoveMetadata;
 
             switch (PdfReducerGlobals.ReduceActionConfiguration.OutputVersion)
             {
-                case PDFReduceParameters.OutputVersionEnum.PdfVersionRetainExisting:
+                case PdfVersion.PdfVersionRetainExisting:
                     cmbPreferredVersion.SelectedIndex = 0;
                     break;
 
-                case PDFReduceParameters.OutputVersionEnum.PdfVersion14:
+                case PdfVersion.PdfVersion14:
                     cmbPreferredVersion.SelectedIndex = 1;
                     break;
 
-                case PDFReduceParameters.OutputVersionEnum.PdfVersion15:
+                case PdfVersion.PdfVersion15:
                     cmbPreferredVersion.SelectedIndex = 2;
                     break;
 
-                case PDFReduceParameters.OutputVersionEnum.PdfVersion16:
+                case PdfVersion.PdfVersion16:
                     cmbPreferredVersion.SelectedIndex = 3;
                     break;
 
-                case PDFReduceParameters.OutputVersionEnum.PdfVersion17:
+                case PdfVersion.PdfVersion17:
                     cmbPreferredVersion.SelectedIndex = 4;
                     break;
             }
 
             switch (PdfReducerGlobals.ReduceActionConfiguration.ImageQuality)
             {
-                case PDFReduceParameters.ImageQualityEnum.ImageQualityLow:
+                case ImageQuality.ImageQualityLow:
                     cmbImageQuality.SelectedIndex = 0;
                     break;
-                case PDFReduceParameters.ImageQualityEnum.ImageQualityMedium:
+                case ImageQuality.ImageQualityMedium:
                     cmbImageQuality.SelectedIndex = 1;
                     break;
-                case PDFReduceParameters.ImageQualityEnum.ImageQualityHigh:
+                case ImageQuality.ImageQualityHigh:
                     cmbImageQuality.SelectedIndex = 2;
                     break;
-                case PDFReduceParameters.ImageQualityEnum.ImageQualityVeryHigh:
+                case ImageQuality.ImageQualityVeryHigh:
                     cmbImageQuality.SelectedIndex = 3;
                     break;
             }
@@ -202,39 +205,41 @@ namespace pdfReducerCloud.Views
             PdfReducerGlobals.ReduceActionConfiguration.EnableCharRepair = chkCharRepair.Checked;
             PdfReducerGlobals.ReduceActionConfiguration.PackFonts = chkPackFonts.Checked;
             PdfReducerGlobals.ReduceActionConfiguration.MRCDownscaleResolution = (int)nuBackgroundImageResolution.Value;
+            PdfReducerGlobals.ReduceActionConfiguration.RemoveMetadata = chkRemoveMetadata.Checked;
+            PdfReducerGlobals.ReduceActionConfiguration.RemovePageThumbnails = chkRemovePageThumbnails.Checked;
 
             switch (cmbImageQuality.SelectedIndex)
             {
                 case 0:
-                    PdfReducerGlobals.ReduceActionConfiguration.ImageQuality = PDFReduceParameters.ImageQualityEnum.ImageQualityLow;
+                    PdfReducerGlobals.ReduceActionConfiguration.ImageQuality = ImageQuality.ImageQualityLow;
                     break;
                 case 1:
-                    PdfReducerGlobals.ReduceActionConfiguration.ImageQuality = PDFReduceParameters.ImageQualityEnum.ImageQualityMedium;
+                    PdfReducerGlobals.ReduceActionConfiguration.ImageQuality = ImageQuality.ImageQualityMedium;
                     break;
                 case 2:
-                    PdfReducerGlobals.ReduceActionConfiguration.ImageQuality = PDFReduceParameters.ImageQualityEnum.ImageQualityHigh;
+                    PdfReducerGlobals.ReduceActionConfiguration.ImageQuality = ImageQuality.ImageQualityHigh;
                     break;
                 case 3:
-                    PdfReducerGlobals.ReduceActionConfiguration.ImageQuality = PDFReduceParameters.ImageQualityEnum.ImageQualityVeryHigh;
+                    PdfReducerGlobals.ReduceActionConfiguration.ImageQuality = ImageQuality.ImageQualityVeryHigh;
                     break;
             }
 
             switch (cmbPreferredVersion.SelectedIndex)
             {
                 case 0:
-                    PdfReducerGlobals.ReduceActionConfiguration.OutputVersion = PDFReduceParameters.OutputVersionEnum.PdfVersionRetainExisting;
+                    PdfReducerGlobals.ReduceActionConfiguration.OutputVersion = PdfVersion.PdfVersionRetainExisting;
                     break;
                 case 1:
-                    PdfReducerGlobals.ReduceActionConfiguration.OutputVersion = PDFReduceParameters.OutputVersionEnum.PdfVersion14;
+                    PdfReducerGlobals.ReduceActionConfiguration.OutputVersion = PdfVersion.PdfVersion14;
                     break;
                 case 2:
-                    PdfReducerGlobals.ReduceActionConfiguration.OutputVersion = PDFReduceParameters.OutputVersionEnum.PdfVersion15;
+                    PdfReducerGlobals.ReduceActionConfiguration.OutputVersion = PdfVersion.PdfVersion15;
                     break;
                 case 3:
-                    PdfReducerGlobals.ReduceActionConfiguration.OutputVersion = PDFReduceParameters.OutputVersionEnum.PdfVersion16;
+                    PdfReducerGlobals.ReduceActionConfiguration.OutputVersion = PdfVersion.PdfVersion16;
                     break;
                 case 4:
-                    PdfReducerGlobals.ReduceActionConfiguration.OutputVersion = PDFReduceParameters.OutputVersionEnum.PdfVersion17;
+                    PdfReducerGlobals.ReduceActionConfiguration.OutputVersion = PdfVersion.PdfVersion17;
                     break;
 
             }

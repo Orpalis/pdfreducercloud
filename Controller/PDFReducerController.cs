@@ -125,9 +125,9 @@ namespace pdfReducerCloud.Controller
 
             string elapsedTime = ParsingUtils.GetElapsedTimeString(_stopwatch.Elapsed);
 
-            _view.NotifyOperationsResult(LogMessagesUtils.GetReductionWorkCompletionText(_operationsStats.ProcessedFileCount, _operationsStats.SuccesfullyProcessedFileCount, _operationsStats.UnsuccesfullyProcessedFileCount, _operationsStats.TotalInputSize, _operationsStats.TotalOutputSize, elapsedTime));
+            _view.NotifyOperationsResult(LogMessagesUtils.GetReductionWorkCompletionText(_operationsStats.ProcessedFileCount, _operationsStats.SuccesfullyProcessedFileCount, _operationsStats.UnsuccessfullyProcessedFileCount, _operationsStats.TotalInputSize, _operationsStats.TotalOutputSize, elapsedTime));
 
-            string detailedWorkCompletionMessage = LogMessagesUtils.GetDetailedReductionWorkCompletionText(_operationsStats.ProcessedFileCount, _operationsStats.SuccesfullyProcessedFileCount, _operationsStats.UnsuccesfullyProcessedFileCount, _operationsStats.FileConvertedToPDFCount, _operationsStats.TotalInputSize, _operationsStats.TotalOutputSize, elapsedTime);
+            string detailedWorkCompletionMessage = LogMessagesUtils.GetDetailedReductionWorkCompletionText(_operationsStats.ProcessedFileCount, _operationsStats.SuccesfullyProcessedFileCount, _operationsStats.UnsuccessfullyProcessedFileCount, _operationsStats.FileConvertedToPDFCount, _operationsStats.TotalInputSize, _operationsStats.TotalOutputSize, elapsedTime);
 
             if (!_appInfo.AutoRun)
             {

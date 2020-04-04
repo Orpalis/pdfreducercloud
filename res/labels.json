@@ -379,8 +379,24 @@
     "Name": "label_lbFonts",
     "ResourceIDs": "*",
     "LocalizedValue": {
-      "fr": "Polices",
-      "en": "Fonts"
+      "fr": "Polices:",
+      "en": "Fonts:"
+    }
+  },
+  {
+    "Name": "label_chkRemoveMetadata",
+    "ResourceIDs": "*",
+    "LocalizedValue": {
+      "fr": "Supprimer les métadonnées",
+      "en": "Remove metadata"
+    }
+  },
+  {
+    "Name": "label_chkRemovePageThumbnails",
+    "ResourceIDs": "*",
+    "LocalizedValue": {
+      "fr": "Supprimer les miniatures de page",
+      "en": "Remove page thumbnails"
     }
   }
 ]

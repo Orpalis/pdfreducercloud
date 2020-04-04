@@ -5,3 +5,4 @@ obj/
 clean.bat
 PDFReducer.Cloud.localization_sheet.xlsx
 changelog.txt
+*.user

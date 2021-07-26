@@ -45,7 +45,7 @@ namespace pdfReducerCloud.Views
             // 
             this.lbCompRatioPct.AutoSize = true;
             this.lbCompRatioPct.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCompRatioPct.Location = new System.Drawing.Point(426, 88);
+            this.lbCompRatioPct.Location = new System.Drawing.Point(450, 88);
             this.lbCompRatioPct.Name = "lbCompRatioPct";
             this.lbCompRatioPct.Size = new System.Drawing.Size(70, 24);
             this.lbCompRatioPct.TabIndex = 37;
@@ -55,7 +55,7 @@ namespace pdfReducerCloud.Views
             // lbCompRatio
             // 
             this.lbCompRatio.AutoSize = true;
-            this.lbCompRatio.Location = new System.Drawing.Point(343, 94);
+            this.lbCompRatio.Location = new System.Drawing.Point(370, 94);
             this.lbCompRatio.Name = "lbCompRatio";
             this.lbCompRatio.Size = new System.Drawing.Size(82, 13);
             this.lbCompRatio.TabIndex = 36;
@@ -63,7 +63,6 @@ namespace pdfReducerCloud.Views
             // 
             // frmMain
             // 
-            this.ClientSize = new System.Drawing.Size(497, 388);
             this.Controls.Add(this.lbCompRatio);
             this.Controls.Add(this.lbCompRatioPct);
             this.Name = "frmMain";

@@ -2,11 +2,20 @@
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>pdfReducerCloud</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
     <ApplicationIcon>res/pdfreducercloud_icon.ico</ApplicationIcon>
-    <Version>1.0.0.16</Version>
+    <Version>1.0.0.19</Version>
+    <AssemblyName>pdfReducer.Cloud</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+	  <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>bin\Release_Cloud\</OutputPath>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <DebugType>none</DebugType>
+    <DebugSymbols>false</DebugSymbols>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,9 +25,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="PassportPDF" Version="1.0.68" />
-    <PackageReference Include="PassportPDF.Tools.Framework" Version="1.0.60" />
-    <PackageReference Include="PassportPDF.Tools.WinForm" Version="1.0.53" />
+    <PackageReference Include="PassportPDF" Version="1.0.74" />
+    <PackageReference Include="PassportPDF.Tools.Framework" Version="1.0.64" />
+    <PackageReference Include="PassportPDF.Tools.WinForm" Version="1.0.57" />
   </ItemGroup>
 
 </Project>

@@ -72,6 +72,7 @@
             this.tabOutputFormat = new System.Windows.Forms.TabPage();
             this.chkKeepWriteAcessTime = new System.Windows.Forms.CheckBox();
             this.cmbPreferredVersion = new System.Windows.Forms.ComboBox();
+            this.chkRemoveEmbeddedFonts = new System.Windows.Forms.CheckBox();
             this.lbPreferredVersion = new System.Windows.Forms.Label();
             this.chkFastWebView = new System.Windows.Forms.CheckBox();
             this.panelOutputFormat = new System.Windows.Forms.Panel();
@@ -458,6 +459,7 @@
             this.tabContentRemoval.Controls.Add(this.chkRemoveBookmarks);
             this.tabContentRemoval.Controls.Add(this.chkRemoveFormFields);
             this.tabContentRemoval.Controls.Add(this.chkRemoveAnnotations);
+            this.tabContentRemoval.Controls.Add(this.chkRemoveEmbeddedFonts);
             this.tabContentRemoval.Controls.Add(this.panelContentRemoval);
             this.tabContentRemoval.Location = new System.Drawing.Point(8, 39);
             this.tabContentRemoval.Margin = new System.Windows.Forms.Padding(6);
@@ -613,6 +615,17 @@
             this.chkRemoveMetadata.TabIndex = 13;
             this.chkRemoveMetadata.Text = "Remove metadata";
             this.chkRemoveMetadata.UseVisualStyleBackColor = true;
+            // 
+            // chkRemoveEmbeddedFonts
+            // 
+            this.chkRemoveEmbeddedFonts.AutoSize = true;
+            this.chkRemoveEmbeddedFonts.Location = new System.Drawing.Point(72, 325);
+            this.chkRemoveMetadata.Margin = new System.Windows.Forms.Padding(6);
+            this.chkRemoveEmbeddedFonts.Name = "chkRemoveEmbeddedFonts";
+            this.chkRemoveEmbeddedFonts.Size = new System.Drawing.Size(246, 29);
+            this.chkRemoveEmbeddedFonts.TabIndex = 15;
+            this.chkRemoveEmbeddedFonts.Text = "Remove embedded fonts";
+            this.chkRemoveEmbeddedFonts.UseVisualStyleBackColor = true;
             // 
             // tabOutputFormat
             // 
@@ -790,5 +803,6 @@
         private System.Windows.Forms.Panel panelOutputFormat;
         private System.Windows.Forms.CheckBox chkRemoveMetadata;
         private System.Windows.Forms.CheckBox chkRemovePageThumbnails;
+        private System.Windows.Forms.CheckBox chkRemoveEmbeddedFonts;
     }
 }

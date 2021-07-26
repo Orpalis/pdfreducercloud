@@ -73,6 +73,8 @@ namespace pdfReducerCloud.Views
             lbDpi2.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_lbDpi2", FrameworkGlobals.ApplicationLanguage);
             chkRemoveMetadata.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_chkRemoveMetadata", FrameworkGlobals.ApplicationLanguage);
             chkRemovePageThumbnails.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_chkRemovePageThumbnails", FrameworkGlobals.ApplicationLanguage);
+            chkRemoveEmbeddedFonts.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_chkRemoveEmbeddedFonts", FrameworkGlobals.ApplicationLanguage);
+
             cmbImageQuality.Items.AddRange(new object[]
             {
                 PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbImageQuality.Items", FrameworkGlobals.ApplicationLanguage),
@@ -123,6 +125,7 @@ namespace pdfReducerCloud.Views
             nuBackgroundImageResolution.Value = PdfReducerGlobals.ReduceActionConfiguration.MRCDownscaleResolution;
             chkRemovePageThumbnails.Checked = PdfReducerGlobals.ReduceActionConfiguration.RemovePageThumbnails;
             chkRemoveMetadata.Checked = PdfReducerGlobals.ReduceActionConfiguration.RemoveMetadata;
+            chkRemoveEmbeddedFonts.Checked = PdfReducerGlobals.ReduceActionConfiguration.RemoveEmbeddedFonts;
 
             switch (PdfReducerGlobals.ReduceActionConfiguration.OutputVersion)
             {
@@ -207,6 +210,7 @@ namespace pdfReducerCloud.Views
             PdfReducerGlobals.ReduceActionConfiguration.MRCDownscaleResolution = (int)nuBackgroundImageResolution.Value;
             PdfReducerGlobals.ReduceActionConfiguration.RemoveMetadata = chkRemoveMetadata.Checked;
             PdfReducerGlobals.ReduceActionConfiguration.RemovePageThumbnails = chkRemovePageThumbnails.Checked;
+            PdfReducerGlobals.ReduceActionConfiguration.RemoveEmbeddedFonts = chkRemoveEmbeddedFonts.Checked;
 
             switch (cmbImageQuality.SelectedIndex)
             {

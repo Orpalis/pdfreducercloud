@@ -398,5 +398,13 @@
       "fr": "Supprimer les miniatures de page",
       "en": "Remove page thumbnails"
     }
+  },
+  {
+    "Name": "label_chkRemoveEmbeddedFonts",
+    "ResourceIDs": "*",
+    "LocalizedValue": {
+      "fr": "Supprimer les polices embarquées",
+      "en": "Remove embedded fonts"
+    }
   }
 ]

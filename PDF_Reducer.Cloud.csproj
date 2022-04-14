@@ -1,33 +1,33 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
-  <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>pdfReducerCloud</RootNamespace>
-    <UseWindowsForms>true</UseWindowsForms>
-    <ApplicationIcon>res/pdfreducercloud_icon.ico</ApplicationIcon>
-    <Version>1.0.0.19</Version>
-    <AssemblyName>pdfReducer.Cloud</AssemblyName>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>netcoreapp3.1</TargetFramework>
+		<RootNamespace>pdfReducerCloud</RootNamespace>
+		<UseWindowsForms>true</UseWindowsForms>
+		<ApplicationIcon>res/pdfreducercloud_icon.ico</ApplicationIcon>
+		<Version>1.0.0.21</Version>
+		<AssemblyName>pdfReducer.Cloud</AssemblyName>
+	</PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-	  <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <OutputPath>bin\Release_Cloud\</OutputPath>
-    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
-    <DebugType>none</DebugType>
-    <DebugSymbols>false</DebugSymbols>
-  </PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<OutputPath>bin\Release_Cloud\</OutputPath>
+		<GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+		<DebugType>none</DebugType>
+		<DebugSymbols>false</DebugSymbols>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <EmbeddedResource Include="res\labels.json" />
-    <EmbeddedResource Include="res\pdfreducercloud_icon.ico" />
-    <EmbeddedResource Include="res\pdf_reducer_cloud_final_logo.png" />
-  </ItemGroup>
+	<ItemGroup>
+		<EmbeddedResource Include="res\labels.json" />
+		<EmbeddedResource Include="res\pdfreducercloud_icon.ico" />
+		<EmbeddedResource Include="res\pdf_reducer_cloud_final_logo.png" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="PassportPDF" Version="1.0.74" />
-    <PackageReference Include="PassportPDF.Tools.Framework" Version="1.0.64" />
-    <PackageReference Include="PassportPDF.Tools.WinForm" Version="1.0.57" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="PassportPDF" Version="1.0.89" />
+		<PackageReference Include="PassportPDF.Tools.Framework" Version="1.0.70" />
+		<PackageReference Include="PassportPDF.Tools.WinForm" Version="1.0.60" />
+	</ItemGroup>
 
 </Project>

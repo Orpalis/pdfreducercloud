@@ -163,12 +163,20 @@
     "Name": "label_cmbImageQuality.Items",
     "ResourceIDs": "*",
     "LocalizedValue": {
+      "fr": "Très basse",
+      "en": "Very low"
+    }
+  },
+  {
+    "Name": "label_cmbImageQuality.Items1",
+    "ResourceIDs": "*",
+    "LocalizedValue": {
       "fr": "Basse",
       "en": "Low"
     }
   },
   {
-    "Name": "label_cmbImageQuality.Items1",
+    "Name": "label_cmbImageQuality.Items2",
     "ResourceIDs": "*",
     "LocalizedValue": {
       "fr": "Moyenne",
@@ -176,7 +184,7 @@
     }
   },
   {
-    "Name": "label_cmbImageQuality.Items2",
+    "Name": "label_cmbImageQuality.Items3",
     "ResourceIDs": "*",
     "LocalizedValue": {
       "fr": "Elevée",
@@ -184,11 +192,19 @@
     }
   },
   {
-    "Name": "label_cmbImageQuality.Items3",
+    "Name": "label_cmbImageQuality.Items4",
     "ResourceIDs": "*",
     "LocalizedValue": {
       "fr": "Très élevée",
-      "en": "Very High"
+      "en": "Very high"
+    }
+  },
+  {
+    "Name": "label_cmbImageQuality.Items5",
+    "ResourceIDs": "*",
+    "LocalizedValue": {
+      "fr": "Très très élevée",
+      "en": "Very very high"
     }
   },
   {
@@ -405,6 +421,14 @@
     "LocalizedValue": {
       "fr": "Supprimer les polices embarquées",
       "en": "Remove embedded fonts"
+    }
+  },
+  {
+    "Name": "label_lbPms",
+    "ResourceIDs": "*",
+    "LocalizedValue": {
+      "fr": "Seuil d'appariement de formes et substitution du JBIG2:",
+      "en": "JBIG2 pattern matching and substitution treshold:"
     }
   }
 ]

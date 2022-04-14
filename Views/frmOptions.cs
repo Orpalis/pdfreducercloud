@@ -74,13 +74,16 @@ namespace pdfReducerCloud.Views
             chkRemoveMetadata.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_chkRemoveMetadata", FrameworkGlobals.ApplicationLanguage);
             chkRemovePageThumbnails.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_chkRemovePageThumbnails", FrameworkGlobals.ApplicationLanguage);
             chkRemoveEmbeddedFonts.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_chkRemoveEmbeddedFonts", FrameworkGlobals.ApplicationLanguage);
+            lbPms.Text = PdfReducerGlobals.LabelsLocalizer.GetString("label_lbPms", FrameworkGlobals.ApplicationLanguage);
 
             cmbImageQuality.Items.AddRange(new object[]
             {
                 PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbImageQuality.Items", FrameworkGlobals.ApplicationLanguage),
                 PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbImageQuality.Items1", FrameworkGlobals.ApplicationLanguage),
                 PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbImageQuality.Items2", FrameworkGlobals.ApplicationLanguage),
-                PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbImageQuality.Items3", FrameworkGlobals.ApplicationLanguage)
+                PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbImageQuality.Items3", FrameworkGlobals.ApplicationLanguage),
+                PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbImageQuality.Items4", FrameworkGlobals.ApplicationLanguage),
+                PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbImageQuality.Items5", FrameworkGlobals.ApplicationLanguage)
             });
             cmbPreferredVersion.Items.AddRange(new object[]
             {
@@ -88,8 +91,21 @@ namespace pdfReducerCloud.Views
                 PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbPreferredVersion.Items1", FrameworkGlobals.ApplicationLanguage),
                 PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbPreferredVersion.Items2", FrameworkGlobals.ApplicationLanguage),
                 PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbPreferredVersion.Items3", FrameworkGlobals.ApplicationLanguage),
-                PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbPreferredVersion.Items4", FrameworkGlobals.ApplicationLanguage)
+                PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbPreferredVersion.Items4", FrameworkGlobals.ApplicationLanguage),
+                "2.0",
+                "A-1a",
+                "A-1b",
+                "A-2a",
+                "A-2b",
+                "A-2u",
+                "A-3a",
+                "A-3b",
+                "A-3u",
+                "A-4",
+                "A-4e",
+                "A-4f"
             });
+
             toolTipPreferredVersion.SetToolTip(cmbPreferredVersion, PdfReducerGlobals.LabelsLocalizer.GetString("label_cmbPreferredVersion.ToolTip", FrameworkGlobals.ApplicationLanguage));
             toolTipPreferredVersion.ToolTipTitle = PdfReducerGlobals.LabelsLocalizer.GetString("label_tooltipPreferredVersionTitle", FrameworkGlobals.ApplicationLanguage);
         }
@@ -126,6 +142,7 @@ namespace pdfReducerCloud.Views
             chkRemovePageThumbnails.Checked = PdfReducerGlobals.ReduceActionConfiguration.RemovePageThumbnails;
             chkRemoveMetadata.Checked = PdfReducerGlobals.ReduceActionConfiguration.RemoveMetadata;
             chkRemoveEmbeddedFonts.Checked = PdfReducerGlobals.ReduceActionConfiguration.RemoveEmbeddedFonts;
+            nuPms.Value = (decimal)PdfReducerGlobals.ReduceActionConfiguration.JBIG2PMSThreshold;
 
             switch (PdfReducerGlobals.ReduceActionConfiguration.OutputVersion)
             {
@@ -148,24 +165,76 @@ namespace pdfReducerCloud.Views
                 case PdfVersion.PdfVersion17:
                     cmbPreferredVersion.SelectedIndex = 4;
                     break;
+
+                case PdfVersion.PdfVersion20:
+                    cmbPreferredVersion.SelectedIndex = 5;
+                    break;
+
+                case PdfVersion.PdfVersionA1a:
+                    cmbPreferredVersion.SelectedIndex = 6;
+                    break;
+
+                case PdfVersion.PdfVersionA1b:
+                    cmbPreferredVersion.SelectedIndex = 7;
+                    break;
+
+                case PdfVersion.PdfVersionA2a:
+                    cmbPreferredVersion.SelectedIndex = 8;
+                    break;
+
+                case PdfVersion.PdfVersionA2b:
+                    cmbPreferredVersion.SelectedIndex = 9;
+                    break;
+                case PdfVersion.PdfVersionA2u:
+                    cmbPreferredVersion.SelectedIndex = 10;
+                    break;
+
+                case PdfVersion.PdfVersionA3a:
+                    cmbPreferredVersion.SelectedIndex = 11;
+                    break;
+
+                case PdfVersion.PdfVersionA3b:
+                    cmbPreferredVersion.SelectedIndex = 12;
+                    break;
+
+                case PdfVersion.PdfVersionA3u:
+                    cmbPreferredVersion.SelectedIndex = 13;
+                    break;
+
+                case PdfVersion.PdfVersionA4:
+                    cmbPreferredVersion.SelectedIndex = 14;
+                    break;
+
+                case PdfVersion.PdfVersionA4e:
+                    cmbPreferredVersion.SelectedIndex = 15;
+                    break;
+
+                case PdfVersion.PdfVersionA4f:
+                    cmbPreferredVersion.SelectedIndex = 16;
+                    break;
             }
 
             switch (PdfReducerGlobals.ReduceActionConfiguration.ImageQuality)
             {
-                case ImageQuality.ImageQualityLow:
+                case ImageQuality.ImageQualityVeryLow:
                     cmbImageQuality.SelectedIndex = 0;
                     break;
-                case ImageQuality.ImageQualityMedium:
+                case ImageQuality.ImageQualityLow:
                     cmbImageQuality.SelectedIndex = 1;
                     break;
-                case ImageQuality.ImageQualityHigh:
+                case ImageQuality.ImageQualityMedium:
                     cmbImageQuality.SelectedIndex = 2;
                     break;
-                case ImageQuality.ImageQualityVeryHigh:
+                case ImageQuality.ImageQualityHigh:
                     cmbImageQuality.SelectedIndex = 3;
                     break;
+                case ImageQuality.ImageQualityVeryHigh:
+                    cmbImageQuality.SelectedIndex = 4;
+                    break;
+                case ImageQuality.ImageQualityVeryVeryHigh:
+                    cmbImageQuality.SelectedIndex = 5;
+                    break;
             }
-
 
             // Check whether mutually exclusive options should be disabled
             chkCharRepair.Enabled = PdfReducerGlobals.ReduceActionConfiguration.EnableColorDetection;
@@ -211,20 +280,27 @@ namespace pdfReducerCloud.Views
             PdfReducerGlobals.ReduceActionConfiguration.RemoveMetadata = chkRemoveMetadata.Checked;
             PdfReducerGlobals.ReduceActionConfiguration.RemovePageThumbnails = chkRemovePageThumbnails.Checked;
             PdfReducerGlobals.ReduceActionConfiguration.RemoveEmbeddedFonts = chkRemoveEmbeddedFonts.Checked;
+            PdfReducerGlobals.ReduceActionConfiguration.JBIG2PMSThreshold = (float)nuPms.Value;
 
             switch (cmbImageQuality.SelectedIndex)
             {
                 case 0:
-                    PdfReducerGlobals.ReduceActionConfiguration.ImageQuality = ImageQuality.ImageQualityLow;
+                    PdfReducerGlobals.ReduceActionConfiguration.ImageQuality = ImageQuality.ImageQualityVeryLow;
                     break;
                 case 1:
-                    PdfReducerGlobals.ReduceActionConfiguration.ImageQuality = ImageQuality.ImageQualityMedium;
+                    PdfReducerGlobals.ReduceActionConfiguration.ImageQuality = ImageQuality.ImageQualityLow;
                     break;
                 case 2:
-                    PdfReducerGlobals.ReduceActionConfiguration.ImageQuality = ImageQuality.ImageQualityHigh;
+                    PdfReducerGlobals.ReduceActionConfiguration.ImageQuality = ImageQuality.ImageQualityMedium;
                     break;
                 case 3:
+                    PdfReducerGlobals.ReduceActionConfiguration.ImageQuality = ImageQuality.ImageQualityHigh;
+                    break;
+                case 4:
                     PdfReducerGlobals.ReduceActionConfiguration.ImageQuality = ImageQuality.ImageQualityVeryHigh;
+                    break;
+                case 5:
+                    PdfReducerGlobals.ReduceActionConfiguration.ImageQuality = ImageQuality.ImageQualityVeryVeryHigh;
                     break;
             }
 
@@ -244,6 +320,42 @@ namespace pdfReducerCloud.Views
                     break;
                 case 4:
                     PdfReducerGlobals.ReduceActionConfiguration.OutputVersion = PdfVersion.PdfVersion17;
+                    break;
+                case 5:
+                    PdfReducerGlobals.ReduceActionConfiguration.OutputVersion = PdfVersion.PdfVersion20;
+                    break;
+                case 6:
+                    PdfReducerGlobals.ReduceActionConfiguration.OutputVersion = PdfVersion.PdfVersionA1a;
+                    break;
+                case 7:
+                    PdfReducerGlobals.ReduceActionConfiguration.OutputVersion = PdfVersion.PdfVersionA1b;
+                    break;
+                case 8:
+                    PdfReducerGlobals.ReduceActionConfiguration.OutputVersion = PdfVersion.PdfVersionA2a;
+                    break;
+                case 9:
+                    PdfReducerGlobals.ReduceActionConfiguration.OutputVersion = PdfVersion.PdfVersionA2b;
+                    break;
+                case 10:
+                    PdfReducerGlobals.ReduceActionConfiguration.OutputVersion = PdfVersion.PdfVersionA2u;
+                    break;
+                case 11:
+                    PdfReducerGlobals.ReduceActionConfiguration.OutputVersion = PdfVersion.PdfVersionA3a;
+                    break;
+                case 12:
+                    PdfReducerGlobals.ReduceActionConfiguration.OutputVersion = PdfVersion.PdfVersionA3b;
+                    break;
+                case 13:
+                    PdfReducerGlobals.ReduceActionConfiguration.OutputVersion = PdfVersion.PdfVersionA3u;
+                    break;
+                case 14:
+                    PdfReducerGlobals.ReduceActionConfiguration.OutputVersion = PdfVersion.PdfVersionA4;
+                    break;
+                case 15:
+                    PdfReducerGlobals.ReduceActionConfiguration.OutputVersion = PdfVersion.PdfVersionA4e;
+                    break;
+                case 16:
+                    PdfReducerGlobals.ReduceActionConfiguration.OutputVersion = PdfVersion.PdfVersionA4f;
                     break;
 
             }
@@ -268,24 +380,25 @@ namespace pdfReducerCloud.Views
 
         private void chkUseMRC_CheckedChanged(object sender, EventArgs e)
         {
-            chkPreserveSmoothing.Enabled = chkUseMRC.Checked;
-            nuBackgroundImageResolution.Enabled = chkUseMRC.Checked;
-            lbBackgroundImageResolution.Enabled = chkUseMRC.Checked;
-            lbDpi2.Enabled = chkUseMRC.Checked;
+            chkPreserveSmoothing.Enabled = lbDpi2.Enabled = nuBackgroundImageResolution.Enabled = lbBackgroundImageResolution.Enabled = chkUseMRC.Checked;
         }
 
 
         private void chkDownscaleImages_CheckedChanged(object sender, EventArgs e)
         {
-            nuDownscaleResolution.Enabled = chkDownscaleImages.Checked;
-            lbDpi.Enabled = chkDownscaleImages.Checked;
-            lbResolution.Enabled = chkDownscaleImages.Checked;
+            nuDownscaleResolution.Enabled = lbDpi.Enabled = lbResolution.Enabled = chkDownscaleImages.Checked;
         }
 
 
         private void chkRecompressImages_CheckedChanged(object sender, EventArgs e)
         {
-            cmbImageQuality.Enabled = chkRecompressImages.Checked;
+            lbQuality.Enabled = cmbImageQuality.Enabled = chkRecompressImages.Checked;
+        }
+
+
+        private void chkJBIG2_CheckedChanged(object sender, EventArgs e)
+        {
+            lbPms.Enabled = nuPms.Enabled = chkJBIG2.Checked;
         }
     }
 }
